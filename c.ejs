@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>CLiBaP</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/send_url.js"></script>
+  </head>
+<body>
+    <header>
+     <div class="container">
+        <a class="header-logo" href="/">CL<span>i</span>BaP</a>
+     </div>
+    </header>
+    <div class="language-wrapper">
+        <div class="language">
+          <div class="language-icon">
+            <img src="/images/c.png">
+          </div>
+          <h2>C</h2>
+          <p>
+            C is a general-purpose, procedural computer programming language supporting structured programming,
+          <br>
+            lexical variable scope, and recursion, with a static type system.
+          <br>
+            By design, C provides constructs that map efficiently to typical machine instructions.
+          </p>
+        </div>
+    </div>
+    <div class="contents-wrapper">
+        <%const items = [
+            {title: '#include <stdio.h>', title1: '-', title2: 'int main(void) {', title3: 'printf("Hello world!\n");', title4: 'return 0;', title5: '}', title6: '-', description: 'Hello world'},
+            {title: '/*', title1: 'int (integer) -> %d', title2: 'float (real number) -> %f', title3: 'char (one character) -> %c', title4: '*/', title5: '-', title6: '-', description: 'data type'},
+            {title: 'int main(void) {', title1: 'int x;', title2: 'x = 10 % 3;', title3: 'printf("%d\n", x);', title4: 'return 0', title5: '}', title6: '-', description: 'calculate with int'},
+            {title: 'if (score >= 60) {', title1: 'printf("OK!\n");', title2: '} else if (score >= 50) {', title3: 'printf("so so...\n");', title4: '} else {', title5: 'printf("NG!\n");', title6: '}', description: 'if, else if'},
+            {title: 'switch(rank) {case 1:', title1: 'printf("Gold!\n");', title2: 'break;', title3: '-', title4: 'default:', title5: 'printf("no medal...\n");', title6: 'break;', description: 'switch'},
+            {title: 'int m = 0;', title1: 'while (m < 10) {', title2: 'printf("m: %d\n", m);', title3: 'm++;', title4: '}', title5: '-', title6: '-', description: 'while'},
+            {title: 'int n = 0;', title1: 'do {', title2: 'printf("n: %d\n", n);', title3: 'n++;', title4: '} while (n < 10);', title5: '-', title6: '-', description: 'do while'},
+            {title: 'for (m = 0; m < 10; m++) {', title1: 'if(m == 3) {', title2: 'continue;   /*skip*/', title3: '}', title4: 'if (m == 8) {', title5: 'break;   /*finish*/', title6: '}', description: 'skip and finish in "for"'},
+            {title: 'float getMax(float a, float b){', title1: 'if(a >= b){', title2: 'return a;', title3: '} else {', title4: 'return b;', title5: '}', title6: '}', description: 'return'},
+            {title: 'float getMax(float a, float b){', title1: 'return (a >= b) ? a : b;', title2: '}', title3: '-', title4: '-', title5: '-', title6: '-', description: 'get max number abbreviation'},
+            {title: 'int sales[3];', title1: '-', title2: 'sales[0] = 200;', title3: 'sales[1] = 400;', title4: 'sales[3] = 300;', title5: '-', title6: 'printf("%d\n", sales[1]);', description: 'sequence (numbers)'},
+            {title: 'char s[] = "abc";', title1: '-', title2: 'printf("%c\n", s[1]);', title3: '-', title4: '-', title5: '-', title6: '-', description: 'sequence (characters)'}
+        ];%>
+
+
+        <%items.forEach((item) => {%>
+            <div class="line-wrapper">
+                <div class="lines">
+                    <h5><%=item.description%></h5>
+                    <div class="line-box">
+                        <p><%=item.title%></p>
+                        <p><%=item.title1%></p>
+                        <p><%=item.title2%></p>
+                        <p><%=item.title3%></p>
+                        <p><%=item.title4%></p>
+                        <p><%=item.title5%></p>
+                        <p><%=item.title6%></p>
+                </div>
+                </div>
+            </div>
+
+            <%});%>
+    </div>
+</body>
+<footer>
+    <div class="bottom-wrapper">
+      <a class="index-button" href="/language">Back to select a language</a>
+    </div>
+    <h6> gcc -v</h6>
+    <h6> gcc -o hello hello.c</h6>
+    <h6> ./hello</h6>   
+</footer>
+</html>
