@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>CLiBaP</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/send_url.js"></script>
+  </head>
+<body>
+    <header>
+     <div class="container">
+        <a class="header-logo" href="/">CL<span>i</span>BaP</a>
+     </div>
+    </header>
+    <div class="language-wrapper">
+        <div class="language">
+          <div class="language-icon">
+            <img src="/images/html.png">
+          </div>
+          <h2>HTML</h2>
+          <p>
+             Hypertext Markup Language is the standard markup language for documents designed to be displayed in a web browser.
+          <br>
+             It can be assisted by technologies such as Cascading Style Sheets and scripting languages such as JavaScript.
+          </p>
+        </div>
+    </div>
+    <div class="contents-wrapper">
+        <%const items = [
+            {title: '<!--xxx-->', description: 'add comment'},
+            {title: '<a href="URL"></a>', description: 'link'},
+            {title: '<ul><li></li></ul>', description: 'list'},
+            {title: '<img src="URL">', description: 'insert image'},
+            {title: '<span></span>', description: 'apply css in the middle of text'},
+            {title: '<input>', description: 'text input(1 line)'},
+            {title: '<textarea></textarea>', description: 'text input(2 lines 〜)'},
+            {title: '<input type="submit">', description: 'send button'},
+            {title: '<input type="submit" value="save">', description: 'save button'},
+            {title: '<span class="fa fa-facebook"></span>', description: 'add icons (after load Font Awesome)'}
+        ];%>
+
+
+        <%items.forEach((item) => {%>
+            <div class="card-wrapper">
+                <div class="card">
+                    <h5><%=item.description%></h5>
+                    <p><%=item.title%></p>
+                </div>
+            </div>
+
+            <%});%>
+    </div>
+</body>
+<footer>
+    <div class="bottom-wrapper">
+      <a class="index-button" href="/language">Back to select a language</a>
+    </div>
+</footer>
+</html>

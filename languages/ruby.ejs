@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>CLiBaP</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/send_url.js"></script>
+  </head>
+<body>
+    <header>
+     <div class="container">
+        <a class="header-logo" href="/">CL<span>i</span>BaP</a>
+     </div>
+    </header>
+    <div class="language-wrapper">
+        <div class="language">
+          <div class="language-icon">
+            <img src="/images/Ruby.png">
+          </div>
+          <h2>Ruby</h2>
+          <p>
+            Ruby is an interpreted, high-level, general-purpose programming language.
+          <br>
+            It was designed and developed in the mid-1990s by Yukihiro "Matz" Matsumoto in Japan.
+          <br>
+            Ruby is dynamically typed and uses garbage collection.
+          </p>
+        </div>
+    </div>
+    <div class="contents-wrapper">
+        <%const items = [
+            {title: 'name = "John Smith"', title1: 'puts "Hi, #{name}!"', title2: '-', title3: '# Hi, John Smith!', title4: '-', title5: '-', title6: '-', description: 'print syntax'},
+            {title: 'score = 94', title1: 'if score > 80', title2: 'puts "Well, done!"', title3: 'end', title4: '-', title5: '# Well, done!', title6: '-', description: 'if'},
+            {title: 'if #condition statement-1', title1: '#calculation', title2: 'elsif #condition statement-2', title3: '#calculation', title4: 'else', title5: '#calculation', title6: 'end', description: 'elsif'},
+            {title: 'names = ["David", "John", "Ken"]', title1: '-', title2: 'names.each do |name|', title3: 'puts name', title4: 'end', title5: '-', title6: '-', description: 'each'},
+            {title: 'user = {name: "Smith", age: 21}', title1: 'puts user[:name]', title2: '-', title3: '#Smith', title4: '-', title5: '-', title6: '-', description: 'array'},
+            {title: 'user = {name: "Smith", age: 21}', title1: 'if user[:age]', title2: 'puts "#{user[:name]} is #{user[:age]} years old."', title3: 'else', title4: '"His age is unkown."', title5: 'end', title6: '----#Smith is 21 years old.----', description: 'if (with nil) (1)'},
+            {title: 'user = {name: "Smith"}', title1: 'if user[:age]', title2: 'puts "#{user[:name]} is #{user[:age]} years old."', title3: 'else', title4: '"His age is unkown."', title5: 'end', title6: '----#His age is unkonw.----', description: 'if (with nil) (2)'},
+            {title: 'users = [', title1: '{name: "John", age: 21},', title2: '{name: "David", age: 34}', title3: ']', title4: 'puts users[1][:name]', title5: '-', title6: '----#David----', description: 'associative array (1)'},
+            {title: 'users = [{name: "John", age: 21},', title1: '{name: "David", age: 34}]', title2: 'users.each do |user|', title3: 'puts user[:name]', title4: 'end', title5: '----#John----', title6: '----#David----', description: 'associative array (2)'},
+            {title: 'def add(a,b)', title1: 'return a + b', title2: 'end', title3: '-', title4: 'sum = add(1,3)', title5: 'puts sum', title6: '----#4----', description: 'return value (1)'},
+            {title: 'def negative ? (number)', title1: 'return number < 0', title2: 'end', title3: '-', title4: 'puts negative ? (5)', title5: '-', title6: '----#false----', description: 'return value (2)'},
+            {title: 'def jusge(score)', title1: 'if score > 80', title2: 'return "well, done"', title3: 'end', title4: 'return "try harder"', title5: 'end', title6: '-', description: 'return value (3)'},
+            {title: 'def introduce(name:, age:, food:)', title1: 'puts "I am #{name}."', title2: 'puts "I am #{age} years old."', title3: 'puts "My favorit food is #{food}.""', title4: 'end', title5: 'introduce(name: "Ninja", age: 14, food: "Ramen")', title6: '-', description: 'method'},
+            {title: 'class Menu', title1: 'attr_accessor :name', title2: 'attr_accessor :price', title3: 'end', title4: '-', title5: '-', title6: '-', description: 'class and instance'},
+            {title: 'class Menu', title1: 'attr_accessor :name', title2: 'attr_accessor :price', title3: 'end', title4: 'menu1 = Menu.new', title5: 'menu1.name = "Sushi"', title6: '-', description: 'put value in instance'},
+            {title: 'class Menu', title1: 'attr_accessor :name', title2: 'attr_accessor :price', title3: 'def show', title4: 'puts "I am menu."', title5: 'end', title6: 'end', description: 'method in class'},
+            {title: 'class Menu', title1: '-', title2: 'def show(data)', title3: 'return "I am #{data}."', title4: 'end', title5: '-', title6: 'puts menu1.show("MENU") ---※ menu1 is already defined.', description: 'instance method'},
+            {title: 'class Menu', title1: 'attr_accessor :name', title2: 'attr_accessor :price', title3: 'def info', title4: 'return "#{self.name},#{self.price}"', title5: 'end', title6: 'end', description: 'method and instance syntax'},
+            {title: '-', title1: 'def initialize', title2: 'puts "Menu is generated."', title3: 'end', title4: '-', title5: 'menu1 = Menu.new', title6: '----#"Menu is generated."----', description: 'initialize method in class (1)'},
+            {title: '-', title1: 'def initialize(message)', title2: 'puts message', title3: 'end', title4: '-', title5: 'menu1 = Menu.new("Hello!")', title6: '----#"Hello!"----', description: 'initialize method in class (2)'},
+            {title: '-', title1: 'def initialize(name:, price:)', title2: 'self.name = name', title3: 'self.price = price', title4: 'end', title5: '-', title6: 'menu1 = Menu.new(name: "Pizza", price: 800)', description: 'initialize method in class (3)'},
+            {title: '-', title1: 'require "./menu"', title2: '-', title3: '----※A name of another file is "menu.rb".----', title4: '-', title5: '-', title6: '-', description: 'load a separated file'},
+            {title: 'menu1 = Menu.new(name: "Pizza", price: 900)', title1: '-', title2: 'menus = [menu1, menu2, ...]', title3: '-', title4: 'menus.each do|menu|', title5: 'puts menu.info', title6: 'end', description: 'sequence of instance'},
+            {title: 'fruits = ["apple", "banana", "orange"]', title1: 'index = 0', title2: 'fruits.do |fruit|', title3: 'puts "#{index}.#{fruit}"', title4: 'index += 1', title5: 'end', title6: '-', description: 'put index'},
+            {title: 'puts "Type your name"', title1: 'name = gets.chomp', title2: 'puts "You are #{name}."', title3: '-', title4: '-', title5: '-', title6: '-', description: 'get input data of console (characters)'},
+            {title: 'puts "Type number"', title1: 'number = get.chomp.to_i', title2: 'puts "Double of #{number} is #{number * 2}."', title3: '-', title4: '-', title5: '-', title6: '-', description: 'get input data of console (number)'},
+            {title: 'require "./menu"', title1: 'class Food < Menu', title2: 'end', title3: '-', title4: '----※In child class, instance syntax and method can be used.----', title5: '-', title6: '-', description: 'create child class'},
+            {title: 'class Food < Menu', title1: 'attr_accessor :calorie', title2: 'def calorie_info', title3: '-', title4: 'end', title5: 'end', title6: '-', description: 'instance method in child class'},
+            {title: 'require "date"', title1: 'date1 = Date.new(2014, 7, 31)', title2: 'puts date1', title3: '-', title4: '-', title5: '----#2014-07-14----', title6: '-', description: 'date instance(1)'},
+            {title: 'require "date"', title1: 'date1 = Date.new(2014, 7, 31)', title2: 'puts date1.sunday?', title3: '-', title4: '-', title5: '----#false----', title6: '-', description: 'date instance(2)'},
+            {title: 'require "date"', title1: 'date1 = Date.today', title2: 'puts.date1', title3: '-', title4: '-', title5: '----#2017-04-28----', title6: '-', description: 'date instance(3)'},
+            {title: 'require "date"', title1: 'class Menu', title2: '-', title3: 'def Menu.is_discounted_today?', title4: 'today = Date.today', title5: 'return today.sunday?', title6: 'end', description: 'date instance(4)'},
+            {title: '-', title1: '-', title2: '-', title3: '-', title4: '-', title5: '-', title6: '-', description: '-'},
+            {title: '-', title1: '-', title2: '-', title3: '-', title4: '-', title5: '-', title6: '-', description: '-'},
+            {title: '-', title1: '-', title2: '-', title3: '-', title4: '-', title5: '-', title6: '-', description: '-'},
+            {title: '-', title1: '-', title2: '-', title3: '-', title4: '-', title5: '-', title6: '-', description: '-'}
+        ];%>
+
+
+        <%items.forEach((item) => {%>
+            <div class="line-wrapper">
+                <div class="lines">
+                    <h5><%=item.description%></h5>
+                    <div class="line-box">
+                        <p><%=item.title%></p>
+                        <p><%=item.title1%></p>
+                        <p><%=item.title2%></p>
+                        <p><%=item.title3%></p>
+                        <p><%=item.title4%></p>
+                        <p><%=item.title5%></p>
+                        <p><%=item.title6%></p>
+                </div>
+                </div>
+            </div>
+
+            <%});%>
+    </div>
+</body>
+<footer>
+    <div class="bottom-wrapper">
+      <a class="index-button" href="/language">Back to select a language</a>
+    </div>
+</footer>
+</html>

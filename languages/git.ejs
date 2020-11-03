@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>CLiBaP</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/send_url.js"></script>
+  </head>
+<body>
+    <header>
+     <div class="container">
+        <a class="header-logo" href="/">CL<span>i</span>BaP</a>
+     </div>
+    </header>
+    <div class="language-wrapper">
+        <div class="language">
+          <div class="language-icon">
+            <img src="/images/Git.png">
+          </div>
+          <h2>Git</h2>
+          <p>
+              Git is a distributed version-control system for tracking changes in source code during software development.
+          <br>
+              It is designed for coordinating work among programmers, but it can be used to track changes in any set of files.
+          <br>
+              Its goals include speed, data integrity, and support for distributed, non-linear workflows.
+          </p>
+        </div>
+    </div>
+    <div class="contents-wrapper">
+        <%const items = [
+            {title: 'git init', description: 'prepare Git'},
+            {title: 'git add xxx', description: 'prepare sharing xxx'},
+            {title: 'git commit -m “xxx”', description: 'commit xxx'},
+            {title: 'git remote add origin URL', description: 'register remote'},
+            {title: 'git push origin master', description: 'upload to registered remote'},
+            {title: 'git pull origin master', description: 'download from remote'},
+            {title: 'git status', description: 'detect modification files'},
+            {title: 'git diff', description: 'display modifications'},
+            {title: 'git log', description: 'display commit history'},
+            {title: 'git log -p', description: 'display commit history (detailed)'}
+        ];%>
+
+
+        <%items.forEach((item) => {%>
+            <div class="card-wrapper">
+                <div class="card">
+                    <h5><%=item.description%></h5>
+                    <p><%=item.title%></p>
+                </div>
+            </div>
+
+            <%});%>
+    </div>
+</body>
+<footer>
+    <div class="bottom-wrapper">
+      <a class="index-button" href="/language">Back to select a language</a>
+      <h6>SEQUENCE : add -> commit -> push -> pull</h6>
+    </div>
+</footer>
+</html>

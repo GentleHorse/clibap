@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>CLiBaP</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/send_url.js"></script>
+  </head>
+<body>
+    <header>
+     <div class="container">
+        <a class="header-logo" href="/">CL<span>i</span>BaP</a>
+     </div>
+    </header>
+    <div class="language-wrapper">
+        <div class="language">
+          <div class="language-icon">
+            <img src="/images/mysql.png">
+          </div>
+          <h2>MySQL</h2>
+          <p>
+             MySQL is an open-source relational database management system.
+          <br>
+             Its name is a combination of "My", the name of co-founder Michael Widenius's daughter,
+          <br>
+             and "SQL", the abbreviation for Structured Query Language.
+          </p>
+        </div>
+    </div>
+    <div class="contents-wrapper">
+        <%const items = [
+            {title: 'brew services start mysql@5.7', description: 'start connecting MySQL'},
+            {title: 'mysql --user=root --password', description: 'log in to MySQL'},
+            {title: 'exit;', description: 'log out from MySQL'},
+            {title: 'brew services stop mysql@5.7', description: 'stop MySQL'},
+            {title: 'SHOW databases;', description: 'display all database'},
+            {title: 'CREATE DATABASE xxx;', description: 'create a new database'},
+            {title: 'USE xxx;', description: 'select database for editing'},
+            {title: 'SHOW tables;', description: 'display inside the database'},
+            {title: 'CREATE TABLE xxx;', description: 'create a new table'},
+            {title: 'DESCRIBE xxx;', description: 'display the table structure'},
+            {title: 'DROP TABLE xxx;', description: 'delete table'},
+            {title: 'DROP DATABASE xxx;', description: 'delete database'},
+            {title: 'SELECT * FROM xxx;', description: 'get data from xxx(table)'},
+            {title: 'INSERT INTO users(kalam name) VALUES (‘xxx’); ', description: 'insert data into table'}
+        ];%>
+
+
+        <%items.forEach((item) => {%>
+            <div class="card-wrapper">
+                <div class="card">
+                    <h5><%=item.description%></h5>
+                    <p><%=item.title%></p>
+                </div>
+            </div>
+
+            <%});%>
+    </div>
+</body>
+<footer>
+    <div class="bottom-wrapper">
+      <a class="index-button" href="/language">Back to select a language</a>
+    </div>
+</footer>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>CLiBaP</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/send_url.js"></script>
+  </head>
+<body>
+    <header>
+     <div class="container">
+        <a class="header-logo" href="/">CL<span>i</span>BaP</a>
+     </div>
+    </header>
+    <div class="language-wrapper">
+        <div class="language">
+          <div class="language-icon">
+            <img src="/images/Terminal.png">
+          </div>
+          <h2>Terminal</h2>
+          <p>
+            Terminal is the terminal emulator included in the macOS operating system by Apple.
+          <br>
+            Terminal originated in NeXTSTEP and OPENSTEP, the predecessor operating systems of macOS.
+          </p>
+        </div>
+    </div>
+    <div class="contents-wrapper">
+        <%const items = [
+            {title: 'touch', description: 'create a file'},
+            {title: 'cat', description: 'display inside of a file'},
+            {title: 'mkdir', description: 'make directory'},
+            {title: 'cd + xxx', description: 'go to lower directory'},
+            {title: 'cd ..', description: 'go to upper directory'},
+            {title: 'cd', description: 'go back to home directory'},
+            {title: 'pwd', description: 'print working directory'},
+            {title: 'ls', description: 'show inside directory'},
+            {title: 'ls -l', description: 'show permission details'},
+            {title: 'mv xxx yyy', description: 'move xxx to yyy'},
+            {title: 'mv xxx yyy', description: 'change name from xxx to yyy'},
+            {title: 'cp xxx yyy', description: 'copy xxx(file) name yyy'},
+            {title: 'cp -r xxx yyy', description: 'copy xxx(directory) name yyy'},
+            {title: 'rm xxx', description: 'remove xxx(file)'},
+            {title: 'rm -r xxx', description: 'remove xxx(directory)'},
+            {title: './ xxx', description: 'open xxx'}
+        ];%>
+
+
+        <%items.forEach((item) => {%>
+            <div class="card-wrapper">
+                <div class="card">
+                    <h5><%=item.description%></h5>
+                    <p><%=item.title%></p>
+                </div>
+            </div>
+
+            <%});%>
+    </div>
+</body>
+<footer>
+    <div class="bottom-wrapper">
+      <a class="index-button" href="/language">Back to select a language</a>
+    </div>
+</footer>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>CLiBaP</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/send_url.js"></script>
+  </head>
+<body>
+    <header>
+     <div class="container">
+        <a class="header-logo" href="/">CL<span>i</span>BaP</a>
+     </div>
+    </header>
+    <div class="language-wrapper">
+        <div class="language">
+          <div class="language-icon">
+            <img src="/images/sql.png">
+          </div>
+          <h2>SQL</h2>
+          <p>
+              SQL is a domain-specific language used in programming and designed for managing data held in a relational database management system,
+          <br>
+              or for stream processing in a relational data stream management system.
+          </p>
+        </div>
+    </div>
+    <div class="contents-wrapper">
+        <%const items = [
+            {title: 'SELECT *', title1: 'FROM xxx', title2: 'WHERE yyy LIKE zzz;', title3: '-', title4: '-', title5: '-', description: 'get silimar data'},
+            {title: 'SELECT *', title1: 'FROM xxx', title2: 'WHERE NOT yyy;', title3: '-', title4: '-', title5: '-', description: 'exclude by condition(yyy)'},
+            {title: 'SELECT *', title1: 'FROM xxx', title2: 'WHERE yyy IS NULL; LIKE zzz', title3: '-', title4: '-', title5: '-', description: 'get null data'},
+            {title: 'SELECT *', title1: 'FROM xxx', title2: 'WHERE yyy', title3: 'AND zzz;', title4: '-', title5: '-', description: 'multiple conditions - 1'},
+            {title: 'SELECT *', title1: 'FROM xxx', title2: 'WHERE yyy', title3: 'OR zzz;', title4: '-', title5: '-', description: 'multiple condition - 2'},
+            {title: 'SELECT *', title1: 'FROM xxx', title2: 'ORDER BY yyy DESC;', title3: '-', title4: '-', title5: '-', description: 'display in order'},
+            {title: 'SELECT *', title1: 'FROM xxx', title2: 'ORDER BY yyy DESC', title3: 'LIMIT z;', title4: '-', title5: '-', description: 'display in order(limited)'},
+            {title: 'SELECT SUM(xxx), yyy', title1: 'FROM zzz', title2: 'GROUP BY yyy', title3: '-', title4: '-', title5: '-', description: 'sum per group'},
+            {title: 'SELECT xxx', title1: 'FROM yyy', title2: 'WHERE zzz > (', title3: 'SELECT zzz', title4: 'FROM yyy', title5: 'WHERE xxx);', description: 'sub query example'},
+            {title: 'SELECT xxx AS aaa', title1: 'FROM yyy', title2: 'WHERE zzz', title3: '-', title4: '-', title5: '-', description: 'change display name'},
+            {title: 'SELECT *', title1: 'FROM xxx', title2: 'JOIN yyy', title3: 'ON aaa = bbb;', title4: '-', title5: '-', description: 'join tables by key'},
+            {title: 'SELECT xxx', title1: 'FROM yyy;', title2: '-', title3: '-', title4: '-', title5: '-', description: '★get data'},
+            {title: 'INSERT INTO xxx (yyy)', title1: 'VALUES (aaa);', title2: '-', title3: '-', title4: '-', title5: '-', description: '★insert data'},
+            {title: 'UPDATE www', title1: 'SET xxx = aaa, yyy = bbb', title2: 'WHERE zzz;', title3: '-', title4: '-', title5: '-', description: '★update data'},
+            {title: 'DELETE FROM xxx', title1: 'WHERE yyy;', title2: '-', title3: '-', title4: '-', title5: '-', description: '★delete data'},
+        ];%>
+
+
+        <%items.forEach((item) => {%>
+            <div class="line-wrapper">
+                <div class="lines">
+                    <h5><%=item.description%></h5>    
+                    <div class= line-box>
+                        <p><%=item.title%></p>
+                        <p><%=item.title1%></p>
+                        <p><%=item.title2%></p>
+                        <p><%=item.title3%></p>
+                        <p><%=item.title4%></p>
+                        <p><%=item.title5%></p>
+                    </div>
+                </div>
+            </div>
+
+            <%});%>
+    </div>
+</body>
+<footer>
+    <div class="bottom-wrapper">
+      <a class="index-button" href="/language">Back to select a language</a>
+    </div>
+</footer>
+</html>

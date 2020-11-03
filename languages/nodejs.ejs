@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>CLiBaP</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/send_url.js"></script>
+  </head>
+<body>
+    <header>
+     <div class="container">
+        <a class="header-logo" href="/">CL<span>i</span>BaP</a>
+     </div>
+    </header>
+    <div class="language-wrapper">
+        <div class="language">
+          <div class="language-icon">
+            <img src="/images/nodejs.png">
+          </div>
+          <h2>Node.js</h2>
+          <p>
+            Node.js is an open-source, cross-platform, JavaScript runtime environment
+          <br>
+            that executes JavaScript code outside a web browser.
+          </p>
+        </div>
+    </div>
+    <div class="contents-wrapper">
+        <%const items = [
+            {title: "const express = require('express');", title1: 'const app = express();', title2: '-', title3: '-', title4: '-', title5: '-', title6: '-', description: 'prepare Express - app.js'},
+            {title: 'app.listen(3000);', title1: '-', title2: '-', title3: '-', title4: '-', title5: '-', title6: '-', description: 'activate localhost 3000 - app.js'},
+            {title: "app.get('/', (req, res) => {", title1: "res.render('top.ejs');", title2: '});', title3: '-', title4: '-', title5: '-', title6: '-', description: 'display top page - app.js'},
+            {title: "app.use(express.static('public'));", title1: '-', title2: '-', title3: '-', title4: '-', title5: '-', title6: '-', description: "prepare using 'public' folder"},
+            {title: '<％ const items = [', title1: "{id: 1, name: 'aaa'},", title2: "{id: 2, name: 'bbb'},", title3: "{id: 3, name: 'ccc'},", title4: '];％>', title5: '-', title6: '-', description: 'For each(1) - index.ejs'},
+            {title: '<％items.forEach((item) => {％>', title1: '<span><％=item.id％></span>', title2: '<span><％=item.name％></span>', title3: '<％});％>', title4: '-', title5: '-', title6: '-', description: 'For each(2) - index.ejs'},
+            {title: 'connection.query(', title1: "'SELECT * FROM items',", title2: '(error, results) => {', title3: 'console.log(results);', title4: "res.render('index.ejs');", title5: '}', title6: ');', description: 'execute query - app.js'},
+            {title: 'connection.query(', title1: "'SELECT * FROM items',", title2: '(error, results) => {', title3: 'console.log(results);', title4: "res.render('index.ejs', {items: results});", title5: '}', title6: ');', description: 'display values - app.js'},
+            {title: '<form action="/create" method="post">', title1: '<input type="text">', title2: '<input type="submit" value="create">', title3: '</form>', title4: '-', title5: '-', title6: '-', description: 'request via form(1) - news.ejs'},
+            {title: "app.post('/create', (res, req) => {", title1: '-', title2: '-', title3: '})', title4: '-', title5: '-', title6: '-', description: 'request via form(2) - app.js'},
+            {title: '<form action="/create" method="post">', title1: '<input type="text" name="itemName">', title2: '<input type="submit" value="create">', title3: '</form>', title4: '-', title5: '-', title6: '-', description: 'receive values from server (1) - new.ejs'},
+            {title: 'app.use(express.urlencoded({extended: false}));', title1: '-', title2: "app.post('/create',(req, res) => {", title3: 'console.log(req.body.itemName);', title4: '-', title5: '-', title6: '-', description: 'receive values from server (2) - app.js'},
+            {title: "app.post('/create', (res, req) => {", title1: 'connection.query(', title2: "'INSERT INTO items(name) VALUES (?)',", title3: '[req.body.itemName],', title4: '(error, results) => { }', title5: ');', title6: '});', description: 'use form values in query - app.js'},
+            {title: '-', title1: "res.redirect('/index');", title2: '-', title3: '-', title4: '-', title5: '-', title6: '-', description: 'redirect'},
+            {title: '<form action="/delete/<％=item.id％>" method="post">', title1: '<input type="submit" value="delete">', title2: '</form>', title3: '-', title4: '-', title5: '-', title6: '-', description: 'create delete button(1) - index.ejs'},
+            {title: "app.post('/delete/:id', (req, res) => {", title1: 'connection.query(', title2: "'DELETE FROM items WHERE id = ?',", title3: '[req.params.id],', title4: '(error, results) => {', title5: "res.redirect('/index');", title6: '});});', description: 'create delete button(2) - app.ejs'},
+            {title: '-', title1: '<a href="/edit/<％=item.id％>">edit</a>', title2: '-', title3: '-', title4: '-', title5: '-', title6: '-', description: 'create edit button(1) - index.ejs'},
+            {title: "app.get('/edit/:id', (req, res) => {", title1: 'connection.query(', title2: "'SELECT * FROM items WHERE id = ?',", title3: '[req.params.id],', title4: '(error, results) => {', title5: "res.render('edit.ejs', {item: results[0]});", title6: '});});', description: 'create edit button(2) - app.ejs'},
+            {title: '<form action="/update/<％=item.id％>" method="post">', title1: '<input name="itemName" value="<％=item.name％>">', title2: '</form>', title3: '-', title4: '-', title5: '-', title6: '-', description: 'create update button(1) - edit.ejs'},
+            {title: "app.post('/update/:id', (req, res) => {", title1: 'connection.query(', title2: "'UPDATE items SET name = ? WHERE id = ?',", title3: '[req.body.itemName, req.params.id],', title4: '(error, results) => {', title5: "res.redirect('/index');", title6: '});});', description: 'create update button(2) - app.ejs'}
+        ];%>
+
+
+        <%items.forEach((item) => {%>
+            <div class="line-wrapper">
+                <div class="lines">
+                    <h5><%=item.description%></h5>
+                    <div class="line-box">
+                        <p><%=item.title%></p>
+                        <p><%=item.title1%></p>
+                        <p><%=item.title2%></p>
+                        <p><%=item.title3%></p>
+                        <p><%=item.title4%></p>
+                        <p><%=item.title5%></p>
+                        <p><%=item.title6%></p>
+                </div>
+                </div>
+            </div>
+
+            <%});%>
+    </div>
+</body>
+<footer>
+    <div class="bottom-wrapper">
+      <a class="index-button" href="/language">Back to select a language</a>
+    </div>
+</footer>
+</html>
