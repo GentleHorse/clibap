@@ -29,17 +29,7 @@
     </div>
     <div class="contents-wrapper">
 <!--         <%const items = [
-            {title: '/*', title1: 'int (integer) -> %d', title2: 'float (real number) -> %f', title3: 'char (one character) -> %c', title4: '*/', title5: '-', title6: '-', description: 'data type'},
-            {title: 'int main(void) {', title1: 'int x;', title2: 'x = 10 % 3;', title3: 'printf("%d\n", x);', title4: 'return 0', title5: '}', title6: '-', description: 'calculate with int'},
-            {title: 'if (score >= 60) {', title1: 'printf("OK!\n");', title2: '} else if (score >= 50) {', title3: 'printf("so so...\n");', title4: '} else {', title5: 'printf("NG!\n");', title6: '}', description: 'if, else if'},
-            {title: 'switch(rank) {case 1:', title1: 'printf("Gold!\n");', title2: 'break;', title3: '-', title4: 'default:', title5: 'printf("no medal...\n");', title6: 'break;', description: 'switch'},
-            {title: 'int m = 0;', title1: 'while (m < 10) {', title2: 'printf("m: %d\n", m);', title3: 'm++;', title4: '}', title5: '-', title6: '-', description: 'while'},
-            {title: 'int n = 0;', title1: 'do {', title2: 'printf("n: %d\n", n);', title3: 'n++;', title4: '} while (n < 10);', title5: '-', title6: '-', description: 'do while'},
-            {title: 'for (m = 0; m < 10; m++) {', title1: 'if(m == 3) {', title2: 'continue;   /*skip*/', title3: '}', title4: 'if (m == 8) {', title5: 'break;   /*finish*/', title6: '}', description: 'skip and finish in "for"'},
-            {title: 'float getMax(float a, float b){', title1: 'if(a >= b){', title2: 'return a;', title3: '} else {', title4: 'return b;', title5: '}', title6: '}', description: 'return'},
-            {title: 'float getMax(float a, float b){', title1: 'return (a >= b) ? a : b;', title2: '}', title3: '-', title4: '-', title5: '-', title6: '-', description: 'get max number abbreviation'},
-            {title: 'int sales[3];', title1: '-', title2: 'sales[0] = 200;', title3: 'sales[1] = 400;', title4: 'sales[3] = 300;', title5: '-', title6: 'printf("%d\n", sales[1]);', description: 'sequence (numbers)'},
-            {title: 'char s[] = "abc";', title1: '-', title2: 'printf("%c\n", s[1]);', title3: '-', title4: '-', title5: '-', title6: '-', description: 'sequence (characters)'}
+            {title: '', title1: '', title2: '', title3: '', title4: '-', title5: '-', title6: '-', description: ''}
         ];%>
 
 
@@ -85,15 +75,151 @@
                         <p>float (real number) -> %f</p>
                         <p>char (one character) -> %c</p>
                         <p>*/</p>
-                        <p></p>
+                        <p>-</p>
                         <p>-</p>
                 </div>
                 </div>
             </div>       
-              
-              
-              
-              
+            <div class="line-wrapper">
+                <div class="lines">
+                    <h5>calculate with int</h5>
+                    <div class="line-box">
+                        <p>int main(void) {</p>
+                        <p>int x;</p>
+                        <p>x = 10 % 3;</p>
+                        <p>printf("%d\n", x);</p>
+                        <p>return 0</p>
+                        <p>}</p>
+                        <p>-</p>
+                </div>
+                </div>
+            </div>              
+            <div class="line-wrapper">
+                <div class="lines">
+                    <h5>if, else if</h5>
+                    <div class="line-box">
+                        <p>if (score >= 60) {</p>
+                        <p>printf("OK!\n");</p>
+                        <p>} else if (score >= 50) {</p>
+                        <p>printf("so so...\n");</p>
+                        <p>} else {</p>
+                        <p>printf("NG!\n");</p>
+                        <p>}</p>
+                </div>
+                </div>
+            </div>
+            <div class="line-wrapper">
+                <div class="lines">
+                    <h5>switch</h5>
+                    <div class="line-box">
+                        <p>switch(rank) {case 1:</p>
+                        <p>printf("Gold!\n");</p>
+                        <p>break;</p>
+                        <p>-</p>
+                        <p>default:</p>
+                        <p>printf("no medal...\n");</p>
+                        <p>break;</p>
+                </div>
+                </div>
+            </div>      
+            <div class="line-wrapper">
+                <div class="lines">
+                    <h5>while</h5>
+                    <div class="line-box">
+                        <p>int m = 0;</p>
+                        <p>while (m < 10) {</p>
+                        <p>printf("m: %d\n", m);</p>
+                        <p>m++;</p>
+                        <p>}</p>
+                        <p>-</p>
+                        <p>-</p>
+                </div>
+                </div>
+            </div>
+            <div class="line-wrapper">
+                <div class="lines">
+                    <h5>do while</h5>
+                    <div class="line-box">
+                        <p>int n = 0;</p>
+                        <p>do {</p>
+                        <p>printf("n: %d\n", n);</p>
+                        <p>n++;</p>
+                        <p>} while (n < 10);</p>
+                        <p>-</p>
+                        <p>-</p>
+                </div>
+                </div>
+            </div> 
+            <div class="line-wrapper">
+                <div class="lines">
+                    <h5>skip and finish in "for"</h5>
+                    <div class="line-box">
+                        <p>for (m = 0; m < 10; m++) {</p>
+                        <p>if(m == 3) {</p>
+                        <p>continue;   /*skip*/</p>
+                        <p>}</p>
+                        <p>if (m == 8) {</p>
+                        <p>break;   /*finish*/</p>
+                        <p>}</p>
+                </div>
+                </div>
+            </div> 
+            <div class="line-wrapper">
+                <div class="lines">
+                    <h5>return</h5>
+                    <div class="line-box">
+                        <p>float getMax(float a, float b){</p>
+                        <p>if(a >= b){</p>
+                        <p>return a;</p>
+                        <p>} else {</p>
+                        <p>return b;</p>
+                        <p>}</p>
+                        <p>}</p>
+                </div>
+                </div>
+            </div> 
+            <div class="line-wrapper">
+                <div class="lines">
+                    <h5>get max number abbreviation</h5>
+                    <div class="line-box">
+                        <p>float getMax(float a, float b){</p>
+                        <p>return (a >= b) ? a : b;</p>
+                        <p>}</p>
+                        <p>-</p>
+                        <p>-</p>
+                        <p>-</p>
+                        <p>-</p>
+                </div>
+                </div>
+            </div> 
+            <div class="line-wrapper">
+                <div class="lines">
+                    <h5>sequence (numbers)</h5>
+                    <div class="line-box">
+                        <p>int sales[3];</p>
+                        <p>-</p>
+                        <p>sales[0] = 200;</p>
+                        <p>sales[1] = 400;</p>
+                        <p>sales[3] = 300;</p>
+                        <p>-</p>
+                        <p>printf("%d\n", sales[1]);</p>
+                </div>
+                </div>
+            </div>      
+            <div class="line-wrapper">
+                <div class="lines">
+                    <h5>sequence (characters)</h5>
+                    <div class="line-box">
+                        <p>char s[] = "abc";</p>
+                        <p>-</p>
+                        <p>printf("%c\n", s[1]);</p>
+                        <p>-</p>
+                        <p>-</p>
+                        <p>-</p>
+                        <p>-</p>
+                </div>
+                </div>
+            </div>              
     </div>
 </body>
 <footer>
