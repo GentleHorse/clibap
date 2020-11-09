@@ -27,34 +27,91 @@
           </p>
         </div>
     </div>
-    <div class="contents-wrapper">
-        <%const items = [
-            {title: 'brew services start mysql@5.7', description: 'start connecting MySQL'},
-            {title: 'mysql --user=root --password', description: 'log in to MySQL'},
-            {title: 'exit;', description: 'log out from MySQL'},
-            {title: 'brew services stop mysql@5.7', description: 'stop MySQL'},
-            {title: 'SHOW databases;', description: 'display all database'},
-            {title: 'CREATE DATABASE xxx;', description: 'create a new database'},
-            {title: 'USE xxx;', description: 'select database for editing'},
-            {title: 'SHOW tables;', description: 'display inside the database'},
-            {title: 'CREATE TABLE xxx;', description: 'create a new table'},
-            {title: 'DESCRIBE xxx;', description: 'display the table structure'},
-            {title: 'DROP TABLE xxx;', description: 'delete table'},
-            {title: 'DROP DATABASE xxx;', description: 'delete database'},
-            {title: 'SELECT * FROM xxx;', description: 'get data from xxx(table)'},
-            {title: 'INSERT INTO users(kalam name) VALUES (‘xxx’); ', description: 'insert data into table'}
-        ];%>
-
-
-        <%items.forEach((item) => {%>
+    <div class="contents-wrapper">              
             <div class="card-wrapper">
                 <div class="card">
-                    <h5><%=item.description%></h5>
-                    <p><%=item.title%></p>
+                    <h5>start connecting MySQL</h5>
+                    <p>brew services start mysql@5.7</p>
                 </div>
             </div>
-
-            <%});%>
+            <div class="card-wrapper">
+                <div class="card">
+                    <h5>log in to MySQL</h5>
+                    <p>mysql --user=root --password</p>
+                </div>
+            </div>
+            <div class="card-wrapper">
+                <div class="card">
+                    <h5>log out from MySQL</h5>
+                    <p>exit;</p>
+                </div>
+            </div>
+            <div class="card-wrapper">
+                <div class="card">
+                    <h5>stop MySQL</h5>
+                    <p>brew services stop mysql@5.7</p>
+                </div>
+            </div>
+            <div class="card-wrapper">
+                <div class="card">
+                    <h5>display all database</h5>
+                    <p>SHOW databases;</p>
+                </div>
+            </div> 
+            <div class="card-wrapper">
+                <div class="card">
+                    <h5>create a new database</h5>
+                    <p>CREATE DATABASE xxx;</p>
+                </div>
+            </div> 
+            <div class="card-wrapper">
+                <div class="card">
+                    <h5>select database for editing</h5>
+                    <p>USE xxx;</p>
+                </div>
+            </div>  
+            <div class="card-wrapper">
+                <div class="card">
+                    <h5>display inside the database</h5>
+                    <p>SHOW tables;</p>
+                </div>
+            </div>
+            <div class="card-wrapper">
+                <div class="card">
+                    <h5>create a new table</h5>
+                    <p>CREATE TABLE xxx;</p>
+                </div>
+            </div>
+            <div class="card-wrapper">
+                <div class="card">
+                    <h5>display the table structure</h5>
+                    <p>DESCRIBE xxx;</p>
+                </div>
+            </div> 
+            <div class="card-wrapper">
+                <div class="card">
+                    <h5>delete table</h5>
+                    <p>DROP TABLE xxx;</p>
+                </div>
+            </div>
+            <div class="card-wrapper">
+                <div class="card">
+                    <h5>delete database</h5>
+                    <p>DROP DATABASE xxx;</p>
+                </div>
+            </div> 
+            <div class="card-wrapper">
+                <div class="card">
+                    <h5>get data from xxx(table)</h5>
+                    <p>SELECT * FROM xxx;</p>
+                </div>
+            </div> 
+            <div class="card-wrapper">
+                <div class="card">
+                    <h5>insert data into table</h5>
+                    <p>INSERT INTO users(kalam name) VALUES (‘xxx’); </p>
+                </div>
+            </div>      
     </div>
 </body>
 <footer>
