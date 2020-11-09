@@ -3,19 +3,19 @@
   <head>
     <meta charset="utf-8">
     <title>CLiBaP</title>
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/clibap/style.css">
     <script src="/send_url.js"></script>
   </head>
 <body>
     <header>
      <div class="container">
-        <a class="header-logo" href="/">CL<span>i</span>BaP</a>
+        <a class="header-logo" href="/clibap/index">CL<span>i</span>BaP</a>
      </div>
     </header>
     <div class="language-wrapper">
         <div class="language">
           <div class="language-icon">
-            <img src="/images/sql.png">
+            <img src="/clibap/sql.png">
           </div>
           <h2>SQL</h2>
           <p>
@@ -26,22 +26,8 @@
         </div>
     </div>
     <div class="contents-wrapper">
-        <%const items = [
-            {title: 'SELECT *', title1: 'FROM xxx', title2: 'WHERE yyy LIKE zzz;', title3: '-', title4: '-', title5: '-', description: 'get silimar data'},
-            {title: 'SELECT *', title1: 'FROM xxx', title2: 'WHERE NOT yyy;', title3: '-', title4: '-', title5: '-', description: 'exclude by condition(yyy)'},
-            {title: 'SELECT *', title1: 'FROM xxx', title2: 'WHERE yyy IS NULL; LIKE zzz', title3: '-', title4: '-', title5: '-', description: 'get null data'},
-            {title: 'SELECT *', title1: 'FROM xxx', title2: 'WHERE yyy', title3: 'AND zzz;', title4: '-', title5: '-', description: 'multiple conditions - 1'},
-            {title: 'SELECT *', title1: 'FROM xxx', title2: 'WHERE yyy', title3: 'OR zzz;', title4: '-', title5: '-', description: 'multiple condition - 2'},
-            {title: 'SELECT *', title1: 'FROM xxx', title2: 'ORDER BY yyy DESC;', title3: '-', title4: '-', title5: '-', description: 'display in order'},
-            {title: 'SELECT *', title1: 'FROM xxx', title2: 'ORDER BY yyy DESC', title3: 'LIMIT z;', title4: '-', title5: '-', description: 'display in order(limited)'},
-            {title: 'SELECT SUM(xxx), yyy', title1: 'FROM zzz', title2: 'GROUP BY yyy', title3: '-', title4: '-', title5: '-', description: 'sum per group'},
-            {title: 'SELECT xxx', title1: 'FROM yyy', title2: 'WHERE zzz > (', title3: 'SELECT zzz', title4: 'FROM yyy', title5: 'WHERE xxx);', description: 'sub query example'},
-            {title: 'SELECT xxx AS aaa', title1: 'FROM yyy', title2: 'WHERE zzz', title3: '-', title4: '-', title5: '-', description: 'change display name'},
-            {title: 'SELECT *', title1: 'FROM xxx', title2: 'JOIN yyy', title3: 'ON aaa = bbb;', title4: '-', title5: '-', description: 'join tables by key'},
-            {title: 'SELECT xxx', title1: 'FROM yyy;', title2: '-', title3: '-', title4: '-', title5: '-', description: '★get data'},
-            {title: 'INSERT INTO xxx (yyy)', title1: 'VALUES (aaa);', title2: '-', title3: '-', title4: '-', title5: '-', description: '★insert data'},
-            {title: 'UPDATE www', title1: 'SET xxx = aaa, yyy = bbb', title2: 'WHERE zzz;', title3: '-', title4: '-', title5: '-', description: '★update data'},
-            {title: 'DELETE FROM xxx', title1: 'WHERE yyy;', title2: '-', title3: '-', title4: '-', title5: '-', description: '★delete data'},
+<!--         <%const items = [
+            {title: '', title1: '', title2: '-', title3: '-', title4: '-', title5: '-', description: ''},
         ];%>
 
 
@@ -60,12 +46,208 @@
                 </div>
             </div>
 
-            <%});%>
+            <%});%> -->
+              
+            <div class="line-wrapper">
+                <div class="lines">
+                    <h5>get silimar data</h5>    
+                    <div class= line-box>
+                        <p>SELECT *</p>
+                        <p>FROM xxx</p>
+                        <p>WHERE yyy LIKE zzz;</p>
+                        <p>-</p>
+                        <p>-</p>
+                        <p>-</p>
+                    </div>
+                </div>
+            </div> 
+            <div class="line-wrapper">
+                <div class="lines">
+                    <h5>exclude by condition(yyy)</h5>    
+                    <div class= line-box>
+                        <p>SELECT *</p>
+                        <p>FROM xxx</p>
+                        <p>WHERE NOT yyy;</p>
+                        <p>-</p>
+                        <p>-</p>
+                        <p>-</p>
+                    </div>
+                </div>
+            </div> 
+            <div class="line-wrapper">
+                <div class="lines">
+                    <h5>get null data</h5>    
+                    <div class= line-box>
+                        <p>SELECT *</p>
+                        <p>FROM xxx</p>
+                        <p>WHERE yyy IS NULL; LIKE zzz</p>
+                        <p>-</p>
+                        <p>-</p>
+                        <p>-</p>
+                    </div>
+                </div>
+            </div>
+            <div class="line-wrapper">
+                <div class="lines">
+                    <h5>multiple conditions - 1</h5>    
+                    <div class= line-box>
+                        <p>SELECT *</p>
+                        <p>FROM xxx</p>
+                        <p>WHERE yyy</p>
+                        <p>AND zzz;</p>
+                        <p>-</p>
+                        <p>-</p>
+                    </div>
+                </div>
+            </div> 
+            <div class="line-wrapper">
+                <div class="lines">
+                    <h5>multiple condition - 2</h5>    
+                    <div class= line-box>
+                        <p>SELECT *</p>
+                        <p>FROM xxx</p>
+                        <p>WHERE yyy</p>
+                        <p>OR zzz;</p>
+                        <p>-</p>
+                        <p>-</p>
+                    </div>
+                </div>
+            </div>
+            <div class="line-wrapper">
+                <div class="lines">
+                    <h5>display in order</h5>    
+                    <div class= line-box>
+                        <p>SELECT *</p>
+                        <p>FROM xxx</p>
+                        <p>ORDER BY yyy DESC;</p>
+                        <p>-</p>
+                        <p>-</p>
+                        <p>-</p>
+                    </div>
+                </div>
+            </div> 
+            <div class="line-wrapper">
+                <div class="lines">
+                    <h5>display in order(limited)</h5>    
+                    <div class= line-box>
+                        <p>SELECT *</p>
+                        <p>FROM xxx</p>
+                        <p>ORDER BY yyy DESC</p>
+                        <p>LIMIT z;</p>
+                        <p>-</p>
+                        <p>-</p>
+                    </div>
+                </div>
+            </div> 
+            <div class="line-wrapper">
+                <div class="lines">
+                    <h5>sum per group</h5>    
+                    <div class= line-box>
+                        <p>SELECT SUM(xxx), yyy</p>
+                        <p>FROM zzz</p>
+                        <p>GROUP BY yyy</p>
+                        <p>-</p>
+                        <p>-</p>
+                        <p>-</p>
+                    </div>
+                </div>
+            </div> 
+            <div class="line-wrapper">
+                <div class="lines">
+                    <h5>sub query example</h5>    
+                    <div class= line-box>
+                        <p>SELECT xxx</p>
+                        <p>FROM yyy</p>
+                        <p>WHERE zzz > (</p>
+                        <p>SELECT zzz</p>
+                        <p>FROM yyy</p>
+                        <p>WHERE xxx);</p>
+                    </div>
+                </div>
+            </div>
+            <div class="line-wrapper">
+                <div class="lines">
+                    <h5>change display name</h5>    
+                    <div class= line-box>
+                        <p>SELECT xxx AS aaa</p>
+                        <p>FROM yyy</p>
+                        <p>WHERE zzz</p>
+                        <p>-</p>
+                        <p>-</p>
+                        <p>-</p>
+                    </div>
+                </div>
+            </div> 
+            <div class="line-wrapper">
+                <div class="lines">
+                    <h5>join tables by key</h5>    
+                    <div class= line-box>
+                        <p>SELECT *</p>
+                        <p>FROM xxx</p>
+                        <p>JOIN yyy</p>
+                        <p>ON aaa = bbb;</p>
+                        <p>-</p>
+                        <p>-</p>
+                    </div>
+                </div>
+            </div> 
+            <div class="line-wrapper">
+                <div class="lines">
+                    <h5>★get data</h5>    
+                    <div class= line-box>
+                        <p>SELECT xxx</p>
+                        <p>FROM yyy;</p>
+                        <p>-</p>
+                        <p>-</p>
+                        <p>-</p>
+                        <p>-</p>
+                    </div>
+                </div>
+            </div>
+            <div class="line-wrapper">
+                <div class="lines">
+                    <h5>★insert data</h5>    
+                    <div class= line-box>
+                        <p>INSERT INTO xxx (yyy)</p>
+                        <p>VALUES (aaa);</p>
+                        <p>-</p>
+                        <p>-</p>
+                        <p>-</p>
+                        <p>-</p>
+                    </div>
+                </div>
+            </div> 
+            <div class="line-wrapper">
+                <div class="lines">
+                    <h5>★update data</h5>    
+                    <div class= line-box>
+                        <p>UPDATE www</p>
+                        <p>SET xxx = aaa, yyy = bbb</p>
+                        <p>WHERE zzz;</p>
+                        <p>-</p>
+                        <p>-</p>
+                        <p>-</p>
+                    </div>
+                </div>
+            </div> 
+            <div class="line-wrapper">
+                <div class="lines">
+                    <h5>★delete data</h5>    
+                    <div class= line-box>
+                        <p>DELETE FROM xxx</p>
+                        <p>WHERE yyy;</p>
+                        <p>-</p>
+                        <p>-</p>
+                        <p>-</p>
+                        <p>-</p>
+                    </div>
+                </div>
+            </div>      
     </div>
 </body>
 <footer>
     <div class="bottom-wrapper">
-      <a class="index-button" href="/language">Back to select a language</a>
+      <a class="index-button" href="/clibap/language">Back to select a language</a>
     </div>
 </footer>
 </html>
