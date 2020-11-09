@@ -3,19 +3,19 @@
   <head>
     <meta charset="utf-8">
     <title>CLiBaP</title>
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/clibap/style.css">
     <script src="/send_url.js"></script>
   </head>
 <body>
     <header>
      <div class="container">
-        <a class="header-logo" href="/">CL<span>i</span>BaP</a>
+        <a class="header-logo" href="/clibap/index">CL<span>i</span>BaP</a>
      </div>
     </header>
     <div class="language-wrapper">
         <div class="language">
           <div class="language-icon">
-            <img src="/images/Ruby.png">
+            <img src="/clibap/Ruby.png">
           </div>
           <h2>Ruby</h2>
           <p>
@@ -28,18 +28,9 @@
         </div>
     </div>
     <div class="contents-wrapper">
-        <%const items = [
-            {title: 'name = "John Smith"', title1: 'puts "Hi, #{name}!"', title2: '-', title3: '# Hi, John Smith!', title4: '-', title5: '-', title6: '-', description: 'print syntax'},
-            {title: 'score = 94', title1: 'if score > 80', title2: 'puts "Well, done!"', title3: 'end', title4: '-', title5: '# Well, done!', title6: '-', description: 'if'},
-            {title: 'if #condition statement-1', title1: '#calculation', title2: 'elsif #condition statement-2', title3: '#calculation', title4: 'else', title5: '#calculation', title6: 'end', description: 'elsif'},
-            {title: 'names = ["David", "John", "Ken"]', title1: '-', title2: 'names.each do |name|', title3: 'puts name', title4: 'end', title5: '-', title6: '-', description: 'each'},
-            {title: 'user = {name: "Smith", age: 21}', title1: 'puts user[:name]', title2: '-', title3: '#Smith', title4: '-', title5: '-', title6: '-', description: 'array'},
-            {title: 'user = {name: "Smith", age: 21}', title1: 'if user[:age]', title2: 'puts "#{user[:name]} is #{user[:age]} years old."', title3: 'else', title4: '"His age is unkown."', title5: 'end', title6: '----#Smith is 21 years old.----', description: 'if (with nil) (1)'},
-            {title: 'user = {name: "Smith"}', title1: 'if user[:age]', title2: 'puts "#{user[:name]} is #{user[:age]} years old."', title3: 'else', title4: '"His age is unkown."', title5: 'end', title6: '----#His age is unkonw.----', description: 'if (with nil) (2)'},
-            {title: 'users = [', title1: '{name: "John", age: 21},', title2: '{name: "David", age: 34}', title3: ']', title4: 'puts users[1][:name]', title5: '-', title6: '----#David----', description: 'associative array (1)'},
-            {title: 'users = [{name: "John", age: 21},', title1: '{name: "David", age: 34}]', title2: 'users.each do |user|', title3: 'puts user[:name]', title4: 'end', title5: '----#John----', title6: '----#David----', description: 'associative array (2)'},
-            {title: 'def add(a,b)', title1: 'return a + b', title2: 'end', title3: '-', title4: 'sum = add(1,3)', title5: 'puts sum', title6: '----#4----', description: 'return value (1)'},
-            {title: 'def negative ? (number)', title1: 'return number < 0', title2: 'end', title3: '-', title4: 'puts negative ? (5)', title5: '-', title6: '----#false----', description: 'return value (2)'},
+<!--         <%const items = [
+
+            {title: '', title1: '', title2: '', title3: '', title4: '', title5: '', title6: '', description: ''},
             {title: 'def jusge(score)', title1: 'if score > 80', title2: 'return "well, done"', title3: 'end', title4: 'return "try harder"', title5: 'end', title6: '-', description: 'return value (3)'},
             {title: 'def introduce(name:, age:, food:)', title1: 'puts "I am #{name}."', title2: 'puts "I am #{age} years old."', title3: 'puts "My favorit food is #{food}.""', title4: 'end', title5: 'introduce(name: "Ninja", age: 14, food: "Ramen")', title6: '-', description: 'method'},
             {title: 'class Menu', title1: 'attr_accessor :name', title2: 'attr_accessor :price', title3: 'end', title4: '-', title5: '-', title6: '-', description: 'class and instance'},
@@ -84,12 +75,168 @@
                 </div>
             </div>
 
-            <%});%>
+            <%});%> -->
+              
+            <div class="line-wrapper">
+                <div class="lines">
+                    <h5>print syntax</h5>
+                    <div class="line-box">
+                        <p>name = "John Smith"</p>
+                        <p>puts "Hi, #{name}!"</p>
+                        <p>-</p>
+                        <p># Hi, John Smith!</p>
+                        <p>-</p>
+                        <p>-</p>
+                        <p>-</p>
+                </div>
+                </div>
+            </div>
+            <div class="line-wrapper">
+                <div class="lines">
+                    <h5>if</h5>
+                    <div class="line-box">
+                        <p>score = 94</p>
+                        <p>if score > 80</p>
+                        <p>puts "Well, done!"</p>
+                        <p>end</p>
+                        <p>-</p>
+                        <p># Well, done!</p>
+                        <p>-</p>
+                </div>
+                </div>
+            </div>  
+            <div class="line-wrapper">
+                <div class="lines">
+                    <h5>elsif</h5>
+                    <div class="line-box">
+                        <p>if #condition statement-1</p>
+                        <p>#calculation</p>
+                        <p>elsif #condition statement-2</p>
+                        <p>#calculation</p>
+                        <p>else</p>
+                        <p>#calculation</p>
+                        <p>end</p>
+                </div>
+                </div>
+            </div> 
+            <div class="line-wrapper">
+                <div class="lines">
+                    <h5>each</h5>
+                    <div class="line-box">
+                        <p>names = ["David", "John", "Ken"]</p>
+                        <p>-</p>
+                        <p>names.each do |name|</p>
+                        <p>puts name</p>
+                        <p>end</p>
+                        <p>-</p>
+                        <p>-</p>
+                </div>
+                </div>
+            </div> 
+            <div class="line-wrapper">
+                <div class="lines">
+                    <h5>array</h5>
+                    <div class="line-box">
+                        <p>user = {name: "Smith", age: 21}</p>
+                        <p>puts user[:name]</p>
+                        <p>-</p>
+                        <p>#Smith</p>
+                        <p>-</p>
+                        <p>-</p>
+                        <p>-</p>
+                </div>
+                </div>
+            </div>
+            <div class="line-wrapper">
+                <div class="lines">
+                    <h5>if (with nil) (1)</h5>
+                    <div class="line-box">
+                        <p>user = {name: "Smith", age: 21}</p>
+                        <p>if user[:age]</p>
+                        <p>puts "#{user[:name]} is #{user[:age]} years old."</p>
+                        <p>else</p>
+                        <p>"His age is unkown."</p>
+                        <p>end</p>
+                        <p>----#Smith is 21 years old.----</p>
+                </div>
+                </div>
+            </div>
+            <div class="line-wrapper">
+                <div class="lines">
+                    <h5>if (with nil) (2)</h5>
+                    <div class="line-box">
+                        <p>user = {name: "Smith"}</p>
+                        <p>if user[:age]</p>
+                        <p>puts "#{user[:name]} is #{user[:age]} years old."</p>
+                        <p>else</p>
+                        <p>"His age is unkown."</p>
+                        <p>end</p>
+                        <p>----#His age is unkonw.----</p>
+                </div>
+                </div>
+            </div>
+            <div class="line-wrapper">
+                <div class="lines">
+                    <h5>associative array (1)</h5>
+                    <div class="line-box">
+                        <p>users = [</p>
+                        <p>{name: "John", age: 21},</p>
+                        <p>{name: "David", age: 34}</p>
+                        <p>]</p>
+                        <p>puts users[1][:name]</p>
+                        <p>-</p>
+                        <p>----#David----</p>
+                </div>
+                </div>
+            </div> 
+            <div class="line-wrapper">
+                <div class="lines">
+                    <h5>associative array (2)</h5>
+                    <div class="line-box">
+                        <p>users = [{name: "John", age: 21},</p>
+                        <p>{name: "David", age: 34}]</p>
+                        <p>users.each do |user|</p>
+                        <p>puts user[:name]</p>
+                        <p>end</p>
+                        <p>----#John----</p>
+                        <p>----#David----</p>
+                </div>
+                </div>
+            </div> 
+            <div class="line-wrapper">
+                <div class="lines">
+                    <h5>return value (1)</h5>
+                    <div class="line-box">
+                        <p>def add(a,b)</p>
+                        <p>return a + b</p>
+                        <p>end</p>
+                        <p>-</p>
+                        <p>sum = add(1,3)</p>
+                        <p>puts sum</p>
+                        <p>----#4----</p>
+                </div>
+                </div>
+            </div>  
+            <div class="line-wrapper">
+                <div class="lines">
+                    <h5>return value (2)</h5>
+                    <div class="line-box">
+                        <p>def negative ? (number)</p>
+                        <p>return number < 0</p>
+                        <p>end</p>
+                        <p>-</p>
+                        <p>puts negative ? (5)</p>
+                        <p>-</p>
+                        <p>----#false----</p>
+                </div>
+                </div>
+            </div>      
+              
     </div>
 </body>
 <footer>
     <div class="bottom-wrapper">
-      <a class="index-button" href="/language">Back to select a language</a>
+      <a class="index-button" href="/clibap/language">Back to select a language</a>
     </div>
 </footer>
 </html>
