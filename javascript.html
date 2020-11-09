@@ -3,19 +3,19 @@
   <head>
     <meta charset="utf-8">
     <title>CLiBaP</title>
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/clibap/style.css">
     <script src="/send_url.js"></script>
   </head>
 <body>
     <header>
      <div class="container">
-        <a class="header-logo" href="/">CL<span>i</span>BaP</a>
+        <a class="header-logo" href="/clibap/index">CL<span>i</span>BaP</a>
      </div>
     </header>
     <div class="language-wrapper">
         <div class="language">
           <div class="language-icon">
-            <img src="/images/javascript.png">
+            <img src="/clibap/javascript.png">
           </div>
           <h2>JavaScript</h2>
           <p>
@@ -28,48 +28,227 @@
         </div>
     </div>
     <div class="contents-wrapper">
-        <%const items = [
-            {title: '//conditonA and condiitonB', title1: 'x > 10 && x < 30', title2: '-', title3: '//condtionA or conditionB', title4: 'x < 10 || x > 30', title5: '-', title6: '-', title7: '-', title8: '-', title9: '-', title10: '-', description: 'and / or'},
-            {title: 'const color = "red"', title1: 'switch(color){', title2: 'case "red":', title3: 'console.log("stop!");', title4: 'break;', title5: 'case "yellow":', title6: '...', title7: 'default:', title8: 'console.log("value is error");', title9: 'break;', title10: '};', description: 'switch'},
-            {title: 'let number = 1;', title1: 'while (number <= 100){', title2: 'console.log(number);', title3: 'number += 1;', title4: '}', title5: '-', title6: '-', title7: '-', title8: '-', title9: '-', title10: '-', description: 'while'},
-            {title: 'const fruits = ["apple", "banana", "orange"];', title1: 'for (let i = 0; i < fruits.length; i++){', title2: 'console.log(fruits[i]);', title3: '}', title4: '-', title5: '-', title6: '-', title7: '-', title8: '-', title9: '-', title10: '-', description: 'length'},
-            {title: 'const introduce = () => {', title1: 'console.log("Hallo.")', title2: 'console.log("mein name ist Johann.")', title3: '};', title4: '-', title5: '-', title6: '-', title7: '-', title8: '-', title9: '-', title10: '-', description: 'arrow'},
-            {title: 'class Dog extends Animal{', title1: 'getHumanAge() {', title2: 'return this.age * 7;', title3: '}', title4: '}', title5: '-', title6: 'const dog = new Dog("Reo", 4);', title7: 'const humanAge = dog.getHumanAge();', title8: 'console.log(humanAge);', title9: '-', title10: '-', description: 'class method'},
-            {title: 'const numbers = [1, 3, 5, 7];', title1: 'const foundNumber = numbers.find((number) => {', title2: 'return number > 3;', title3: '});', title4: 'console.log(foundNumber);', title5: '-', title6: '-', title7: '-', title8: '-', title9: '-', title10: '-', description: 'find(1)'},
-            {title: 'const characters = [', title1: '{id: 1, name: "Kent"},', title2: '{id: 2, "John"}', title3: '];', title4: 'const foundCharacter = characters.find((character) => {', title5: 'return character.id === 1;', title6: '});', title7: 'console.log(foundCharacter);', title8: '-', title9: '-', title10: '-', description: 'find(2)'},
-            {title: 'const numbers = [1, 2, 3];', title1: 'const doubledNumbers = numbers.map((number) => {', title2: 'return number * 2;', title3: '});', title4: 'console.log(doubledNumbers);', title5: '-', title6: '-', title7: '-', title8: '-', title9: '-', title10: '-', description: 'map(1)'},
-            {title: 'const names = [', title1: '{firstName: "John", lastName: "Smith"},', title2: '{firstName: "Aran", lastName: "Chen"}', title3: '];', title4: 'const fullNames = names.map((name) => {', title5: 'return name.firstName + name.lastName;', title6: '});', title7: 'console.log(fullNames);', title8: '-', title9: '-', title10: '-', description: 'map(2)'},
-            {title: 'const numbers = [1, 2, 3];', title1: 'numbers.forEach((number) => {console.log(numbers);});', title2: '-', title3: '-', title4: '-', title5: '-', title6: '-', title7: '-', title8: '-', title9: '-', title10: '-', description: 'forEach'},
-            {title: 'const introduce = (callback) => {', title1: 'callback("John Smith", 120);', title2: '};', title3: 'introduce((name, age) => {', title4: 'console.log(`${name} is ${age} years old.`);', title5: '});', title6: '-', title7: '// John Smith is 120 years old.', title8: '-', title9: '-', title10: '-', description: 'callback'}
-        ];%>
-
-
-        <%items.forEach((item) => {%>
             <div class="line-wrapper">
                 <div class="lines">
-                    <h5><%=item.description%></h5>
+                    <h5>and / or</h5>
                     <div class="line-box">
-                      <p><%=item.title%></p>
-                      <p><%=item.title1%></p>
-                      <p><%=item.title2%></p>
-                      <p><%=item.title3%></p>
-                      <p><%=item.title4%></p>
-                      <p><%=item.title5%></p>
-                      <p><%=item.title6%></p>
-                      <p><%=item.title7%></p>
-                      <p><%=item.title8%></p>
-                      <p><%=item.title9%></p>
-                      <p><%=item.title10%></p>
+                      <p>//conditonA and condiitonB</p>
+                      <p>x > 10 && x < 30</p>
+                      <p>-</p>
+                      <p>//condtionA or conditionB</p>
+                      <p>x < 10 || x > 30</p>
+                      <p>-</p>
+                      <p>-</p>
+                      <p>-</p>
+                      <p>-</p>
+                      <p>-</p>
+                      <p>-</p>
+                </div>
+                </div>
+            </div>  
+            <div class="line-wrapper">
+                <div class="lines">
+                    <h5>switch</h5>
+                    <div class="line-box">
+                      <p>const color = "red"</p>
+                      <p>switch(color){</p>
+                      <p>case "red":</p>
+                      <p>console.log("stop!");</p>
+                      <p>break;</p>
+                      <p>case "yellow":</p>
+                      <p>...</p>
+                      <p>default:</p>
+                      <p>console.log("value is error");</p>
+                      <p>break;</p>
+                      <p>};</p>
                 </div>
                 </div>
             </div>
-
-            <%});%>
+            <div class="line-wrapper">
+                <div class="lines">
+                    <h5>while</h5>
+                    <div class="line-box">
+                      <p>let number = 1;</p>
+                      <p>while (number <= 100){</p>
+                      <p>console.log(number);</p>
+                      <p>number += 1;</p>
+                      <p>}</p>
+                      <p>-</p>
+                      <p>-</p>
+                      <p>-</p>
+                      <p>-</p>
+                      <p>-</p>
+                      <p>-</p>
+                </div>
+                </div>
+            </div> 
+            <div class="line-wrapper">
+                <div class="lines">
+                    <h5>length</h5>
+                    <div class="line-box">
+                      <p>const fruits = ["apple", "banana", "orange"];</p>
+                      <p>for (let i = 0; i < fruits.length; i++){</p>
+                      <p>console.log(fruits[i]);</p>
+                      <p>}</p>
+                      <p>-</p>
+                      <p>-</p>
+                      <p>-</p>
+                      <p>-</p>
+                      <p>-</p>
+                      <p>-</p>
+                      <p>-</p>
+                </div>
+                </div>
+            </div> 
+            <div class="line-wrapper">
+                <div class="lines">
+                    <h5>arrow</h5>
+                    <div class="line-box">
+                      <p>const introduce = () => {</p>
+                      <p>console.log("Hallo.")</p>
+                      <p>console.log("mein name ist Johann.")</p>
+                      <p>};</p>
+                      <p>-</p>
+                      <p>-</p>
+                      <p>-</p>
+                      <p>-</p>
+                      <p>-</p>
+                      <p>-</p>
+                      <p>-</p>
+                </div>
+                </div>
+            </div>  
+            <div class="line-wrapper">
+                <div class="lines">
+                    <h5>class method</h5>
+                    <div class="line-box">
+                      <p>class Dog extends Animal{</p>
+                      <p>getHumanAge() {</p>
+                      <p>return this.age * 7;</p>
+                      <p>}</p>
+                      <p>}</p>
+                      <p>-</p>
+                      <p>const dog = new Dog("Reo", 4);</p>
+                      <p>const humanAge = dog.getHumanAge();</p>
+                      <p>console.log(humanAge);</p>
+                      <p>-</p>
+                      <p>-</p>
+                </div>
+                </div>
+            </div> 
+            <div class="line-wrapper">
+                <div class="lines">
+                    <h5>find(1)</h5>
+                    <div class="line-box">
+                      <p>const numbers = [1, 3, 5, 7];</p>
+                      <p>const foundNumber = numbers.find((number) => {</p>
+                      <p>return number > 3;</p>
+                      <p>});</p>
+                      <p>console.log(foundNumber);</p>
+                      <p>-</p>
+                      <p>-</p>
+                      <p>-</p>
+                      <p>-</p>
+                      <p>-</p>
+                      <p>-</p>
+                </div>
+                </div>
+            </div> 
+            <div class="line-wrapper">
+                <div class="lines">
+                    <h5>find(2)</h5>
+                    <div class="line-box">
+                      <p>const characters = [</p>
+                      <p>{id: 1, name: "Kent"},</p>
+                      <p>{id: 2, "John"}</p>
+                      <p>];</p>
+                      <p>const foundCharacter = characters.find((character) => {</p>
+                      <p>return character.id === 1;</p>
+                      <p>});</p>
+                      <p>console.log(foundCharacter);</p>
+                      <p>-</p>
+                      <p>-</p>
+                      <p>-</p>
+                </div>
+                </div>
+            </div> 
+            <div class="line-wrapper">
+                <div class="lines">
+                    <h5>map(1)</h5>
+                    <div class="line-box">
+                      <p>const numbers = [1, 2, 3];</p>
+                      <p>const doubledNumbers = numbers.map((number) => {</p>
+                      <p>return number * 2;</p>
+                      <p>});</p>
+                      <p>console.log(doubledNumbers);</p>
+                      <p>-</p>
+                      <p>-</p>
+                      <p>-</p>
+                      <p>-</p>
+                      <p>-</p>
+                      <p>-</p>
+                </div>
+                </div>
+            </div>
+            <div class="line-wrapper">
+                <div class="lines">
+                    <h5>map(2)</h5>
+                    <div class="line-box">
+                      <p>const names = [</p>
+                      <p>{firstName: "John", lastName: "Smith"},</p>
+                      <p>{firstName: "Aran", lastName: "Chen"}</p>
+                      <p>];</p>
+                      <p>const fullNames = names.map((name) => {</p>
+                      <p>return name.firstName + name.lastName;</p>
+                      <p>});</p>
+                      <p>console.log(fullNames);</p>
+                      <p>-</p>
+                      <p>-</p>
+                      <p>-</p>
+                </div>
+                </div>
+            </div>  
+            <div class="line-wrapper">
+                <div class="lines">
+                    <h5>forEach</h5>
+                    <div class="line-box">
+                      <p>const numbers = [1, 2, 3];</p>
+                      <p>numbers.forEach((number) => {console.log(numbers);});</p>
+                      <p>-</p>
+                      <p>-</p>
+                      <p>-</p>
+                      <p>-</p>
+                      <p>-</p>
+                      <p>-</p>
+                      <p>-</p>
+                      <p>-</p>
+                      <p>-</p>
+                </div>
+                </div>
+            </div> 
+            <div class="line-wrapper">
+                <div class="lines">
+                    <h5>callback</h5>
+                    <div class="line-box">
+                      <p>const introduce = (callback) => {</p>
+                      <p>callback("John Smith", 120);</p>
+                      <p>};</p>
+                      <p>introduce((name, age) => {</p>
+                      <p>console.log(`${name} is ${age} years old.`);</p>
+                      <p>});</p>
+                      <p>-</p>
+                      <p>// John Smith is 120 years old.</p>
+                      <p>-</p>
+                      <p>-</p>
+                      <p>-</p>
+                </div>
+                </div>
+            </div>      
     </div>
 </body>
 <footer>
     <div class="bottom-wrapper">
-      <a class="index-button" href="/language">Back to select a language</a>
+      <a class="index-button" href="/clibap/language">Back to select a language</a>
     </div>
 </footer>
 </html>
