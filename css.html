@@ -3,19 +3,19 @@
   <head>
     <meta charset="utf-8">
     <title>CLiBaP</title>
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/clibap/style.css">
     <script src="/send_url.js"></script>
   </head>
 <body>
     <header>
      <div class="container">
-        <a class="header-logo" href="/">CL<span>i</span>BaP</a>
+        <a class="header-logo" href="/clibap/index">CL<span>i</span>BaP</a>
      </div>
     </header>
     <div class="language-wrapper">
         <div class="language">
           <div class="language-icon">
-            <img src="/images/css.png">
+            <img src="//css.png">
           </div>
           <h2>CSS</h2>
           <p>
@@ -26,24 +26,8 @@
         </div>
     </div>
     <div class="contents-wrapper">
-        <%const items = [
-            {title: 'color: #eeeeee', description: 'text color;'},
-            {title: '/* abcdefg */', description: 'add comment'},
-            {title: 'font-size: 10px;', description: 'font size'},
-            {title: 'font-family: "Avenir Next";', description: 'font type'},
-            {title: 'background-color: #ffffff;', description: 'background color'},
-            {title: 'width: 100px; height: 100px;', description: 'object size'},
-            {title: 'list-style: none;', description: 'hide bullet points'},
-            {title: 'float: left;', description: 'place left to right'},
-            {title: 'border: 5px solid red;', description: 'border line(full)'},
-            {title: 'border-bottom: 1px solid #333;', description: 'border line(bottom)'},
-            {title: 'background-image: url(xxx.png)', description: 'background image'},
-            {title: 'background-size: cover;', description: 'fully cover background with image'},
-            {title: 'margin: 0 auto;', description: 'locate at center'},
-            {title: 'opacity: 0.3;', description: 'translucency'},
-            {title: 'letter-spacing: 10px', description: 'space between letters'},
-            {title: 'div:hover {background-color: red;}', description: 'css of putting mouse on'},
-            {title: 'border-radius: 10px;', description: 'round corners'},
+<!--         <%const items = [
+            {title: '', description: ''},
             {title: 'text-align: left;', description: 'text align'},
             {title: 'background-color: rgba(84, 190, 238, 0.5);', description: 'translucent only background'},
             {title: 'transition: all 1s;', description: 'animation (combined with hover.etc)'},
@@ -76,12 +60,115 @@
                 </div>
             </div>
 
-            <%});%>
+            <%});%> -->
+              
+            <div class="card-wrapper">
+                <div class="card">
+                    <h5>text color</h5>
+                    <p>color: #eeeeee;</p>
+                </div>
+            </div>  
+            <div class="card-wrapper">
+                <div class="card">
+                    <h5>add comment</h5>
+                    <p>/* abcdefg */</p>
+                </div>
+            </div>  
+            <div class="card-wrapper">
+                <div class="card">
+                    <h5>font size</h5>
+                    <p>font-size: 10px;</p>
+                </div>
+            </div>  
+            <div class="card-wrapper">
+                <div class="card">
+                    <h5>font type</h5>
+                    <p>font-family: "Avenir Next";</p>
+                </div>
+            </div>  
+            <div class="card-wrapper">
+                <div class="card">
+                    <h5>background color</h5>
+                    <p>background-color: #ffffff;</p>
+                </div>
+            </div>   
+            <div class="card-wrapper">
+                <div class="card">
+                    <h5>object size</h5>
+                    <p>width: 100px; height: 100px;</p>
+                </div>
+            </div>  
+            <div class="card-wrapper">
+                <div class="card">
+                    <h5>hide bullet points</h5>
+                    <p>list-style: none;</p>
+                </div>
+            </div> 
+            <div class="card-wrapper">
+                <div class="card">
+                    <h5>place left to right</h5>
+                    <p>float: left;</p>
+                </div>
+            </div>   
+            <div class="card-wrapper">
+                <div class="card">
+                    <h5>border line(full)</h5>
+                    <p>border: 5px solid red;</p>
+                </div>
+            </div> 
+            <div class="card-wrapper">
+                <div class="card">
+                    <h5>border line(bottom)</h5>
+                    <p>border-bottom: 1px solid #333;</p>
+                </div>
+            </div>  
+            <div class="card-wrapper">
+                <div class="card">
+                    <h5>background image</h5>
+                    <p>background-image: url(xxx.png)</p>
+                </div>
+            </div>   
+            <div class="card-wrapper">
+                <div class="card">
+                    <h5>fully cover background with image</h5>
+                    <p>background-size: cover;</p>
+                </div>
+            </div>  
+            <div class="card-wrapper">
+                <div class="card">
+                    <h5>locate at center</h5>
+                    <p>margin: 0 auto;</p>
+                </div>
+            </div>  
+            <div class="card-wrapper">
+                <div class="card">
+                    <h5>translucency</h5>
+                    <p>opacity: 0.3;</p>
+                </div>
+            </div>  
+            <div class="card-wrapper">
+                <div class="card">
+                    <h5>space between letters</h5>
+                    <p>letter-spacing: 10px</p>
+                </div>
+            </div> 
+            <div class="card-wrapper">
+                <div class="card">
+                    <h5>css of putting mouse on</h5>
+                    <p>div:hover {background-color: red;}</p>
+                </div>
+            </div> 
+            <div class="card-wrapper">
+                <div class="card">
+                    <h5>round corners</h5>
+                    <p>border-radius: 10px;</p>
+                </div>
+            </div>         
     </div>
 </body>
 <footer>
     <div class="bottom-wrapper">
-      <a class="index-button" href="/language">Back to select a language</a>
+      <a class="index-button" href="/clibap/language">Back to select a language</a>
     </div>
 </footer>
 </html>
