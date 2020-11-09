@@ -25,43 +25,7 @@
           </p>
         </div>
     </div>
-    <div class="contents-wrapper">
-<!--         <%const items = [
-
-            {title: '', title1: "", title2: '', title3: '', title4: "", title5: '', title6: '', description: ''},
-            {title: '<form action="/create" method="post">', title1: '<input type="text">', title2: '<input type="submit" value="create">', title3: '</form>', title4: '-', title5: '-', title6: '-', description: 'request via form(1) - news.ejs'},
-            {title: "app.post('/create', (res, req) => {", title1: '-', title2: '-', title3: '})', title4: '-', title5: '-', title6: '-', description: 'request via form(2) - app.js'},
-            {title: '<form action="/create" method="post">', title1: '<input type="text" name="itemName">', title2: '<input type="submit" value="create">', title3: '</form>', title4: '-', title5: '-', title6: '-', description: 'receive values from server (1) - new.ejs'},
-            {title: 'app.use(express.urlencoded({extended: false}));', title1: '-', title2: "app.post('/create',(req, res) => {", title3: 'console.log(req.body.itemName);', title4: '-', title5: '-', title6: '-', description: 'receive values from server (2) - app.js'},
-            {title: "app.post('/create', (res, req) => {", title1: 'connection.query(', title2: "'INSERT INTO items(name) VALUES (?)',", title3: '[req.body.itemName],', title4: '(error, results) => { }', title5: ');', title6: '});', description: 'use form values in query - app.js'},
-            {title: '-', title1: "res.redirect('/index');", title2: '-', title3: '-', title4: '-', title5: '-', title6: '-', description: 'redirect'},
-            {title: '<form action="/delete/<％=item.id％>" method="post">', title1: '<input type="submit" value="delete">', title2: '</form>', title3: '-', title4: '-', title5: '-', title6: '-', description: 'create delete button(1) - index.ejs'},
-            {title: "app.post('/delete/:id', (req, res) => {", title1: 'connection.query(', title2: "'DELETE FROM items WHERE id = ?',", title3: '[req.params.id],', title4: '(error, results) => {', title5: "res.redirect('/index');", title6: '});});', description: 'create delete button(2) - app.ejs'},
-            {title: '-', title1: '<a href="/edit/<％=item.id％>">edit</a>', title2: '-', title3: '-', title4: '-', title5: '-', title6: '-', description: 'create edit button(1) - index.ejs'},
-            {title: "app.get('/edit/:id', (req, res) => {", title1: 'connection.query(', title2: "'SELECT * FROM items WHERE id = ?',", title3: '[req.params.id],', title4: '(error, results) => {', title5: "res.render('edit.ejs', {item: results[0]});", title6: '});});', description: 'create edit button(2) - app.ejs'},
-            {title: '<form action="/update/<％=item.id％>" method="post">', title1: '<input name="itemName" value="<％=item.name％>">', title2: '</form>', title3: '-', title4: '-', title5: '-', title6: '-', description: 'create update button(1) - edit.ejs'},
-            {title: "app.post('/update/:id', (req, res) => {", title1: 'connection.query(', title2: "'UPDATE items SET name = ? WHERE id = ?',", title3: '[req.body.itemName, req.params.id],', title4: '(error, results) => {', title5: "res.redirect('/index');", title6: '});});', description: 'create update button(2) - app.ejs'}
-        ];%>
-
-
-        <%items.forEach((item) => {%>
-            <div class="line-wrapper">
-                <div class="lines">
-                    <h5><%=item.description%></h5>
-                    <div class="line-box">
-                        <p><%=item.title%></p>
-                        <p><%=item.title1%></p>
-                        <p><%=item.title2%></p>
-                        <p><%=item.title3%></p>
-                        <p><%=item.title4%></p>
-                        <p><%=item.title5%></p>
-                        <p><%=item.title6%></p>
-                </div>
-                </div>
-            </div>
-
-            <%});%> -->
-              
+    <div class="contents-wrapper">              
             <div class="line-wrapper">
                 <div class="lines">
                     <h5>prepare Express - app.js</h5>
@@ -171,6 +135,174 @@
                         <p>res.render('index.ejs', {items: results});</p>
                         <p>}</p>
                         <p>);</p>
+                </div>
+                </div>
+            </div>
+            <div class="line-wrapper">
+                <div class="lines">
+                    <h5>request via form(1) - news.ejs</h5>
+                    <div class="line-box">
+                        <p>＜form action="/create" method="post"＞</p>
+                        <p>＜input type="text"＞</p>
+                        <p>＜input type="submit" value="create"＞</p>
+                        <p>＜/form＞</p>
+                        <p>-</p>
+                        <p>-</p>
+                        <p>-</p>
+                </div>
+                </div>
+            </div> 
+            <div class="line-wrapper">
+                <div class="lines">
+                    <h5>request via form(2) - app.js</h5>
+                    <div class="line-box">
+                        <p>app.post('/create', (res, req) => {</p>
+                        <p>-</p>
+                        <p>-</p>
+                        <p>})</p>
+                        <p>-</p>
+                        <p>-</p>
+                        <p>-</p>
+                </div>
+                </div>
+            </div> 
+            <div class="line-wrapper">
+                <div class="lines">
+                    <h5>receive values from server (1) - new.ejs</h5>
+                    <div class="line-box">
+                        <p>＜form action="/create" method="post"＞</p>
+                        <p>＜input type="text" name="itemName"＞</p>
+                        <p>＜input type="submit" value="create"＞</p>
+                        <p>＜/form＞</p>
+                        <p>-</p>
+                        <p>-</p>
+                        <p>-</p>
+                </div>
+                </div>
+            </div>
+            <div class="line-wrapper">
+                <div class="lines">
+                    <h5>receive values from server (2) - app.js</h5>
+                    <div class="line-box">
+                        <p>app.use(express.urlencoded({extended: false}));</p>
+                        <p>-</p>
+                        <p>app.post('/create',(req, res) => {</p>
+                        <p>console.log(req.body.itemName);</p>
+                        <p>-</p>
+                        <p>-</p>
+                        <p>-</p>
+                </div>
+                </div>
+            </div>
+            <div class="line-wrapper">
+                <div class="lines">
+                    <h5>use form values in query - app.js</h5>
+                    <div class="line-box">
+                        <p>app.post('/create', (res, req) => {</p>
+                        <p>connection.query(</p>
+                        <p>'INSERT INTO items(name) VALUES (?)',</p>
+                        <p>[req.body.itemName],</p>
+                        <p>(error, results) => { }</p>
+                        <p>);</p>
+                        <p>});</p>
+                </div>
+                </div>
+            </div> 
+            <div class="line-wrapper">
+                <div class="lines">
+                    <h5>redirect</h5>
+                    <div class="line-box">
+                        <p>-</p>
+                        <p>res.redirect('/index');</p>
+                        <p>-</p>
+                        <p>-</p>
+                        <p>-</p>
+                        <p>-</p>
+                        <p>-</p>
+                </div>
+                </div>
+            </div>
+            <div class="line-wrapper">
+                <div class="lines">
+                    <h5>create delete button(1) - index.ejs</h5>
+                    <div class="line-box">
+                        <p>＜form action="/delete/＜％=item.id％＞" method="post"＞</p>
+                        <p>＜input type="submit" value="delete"＞</p>
+                        <p>＜/form＞</p>
+                        <p>-</p>
+                        <p>-</p>
+                        <p>-</p>
+                        <p>-</p>
+                </div>
+                </div>
+            </div>
+            <div class="line-wrapper">
+                <div class="lines">
+                    <h5>create delete button(2) - app.ejs</h5>
+                    <div class="line-box">
+                        <p>app.post('/delete/:id', (req, res) => {</p>
+                        <p>connection.query(</p>
+                        <p>'DELETE FROM items WHERE id = ?',</p>
+                        <p>[req.params.id],</p>
+                        <p>(error, results) => {</p>
+                        <p>res.redirect('/index');</p>
+                        <p>});});</p>
+                </div>
+                </div>
+            </div>
+            <div class="line-wrapper">
+                <div class="lines">
+                    <h5>create edit button(1) - index.ejs</h5>
+                    <div class="line-box">
+                        <p>-</p>
+                        <p>＜a href="/edit/＜％=item.id％＞"＞edit＜/a＞</p>
+                        <p>-</p>
+                        <p>-</p>
+                        <p>-</p>
+                        <p>-</p>
+                        <p>-</p>
+                </div>
+                </div>
+            </div>
+            <div class="line-wrapper">
+                <div class="lines">
+                    <h5>create edit button(2) - app.ejs</h5>
+                    <div class="line-box">
+                        <p>app.get('/edit/:id', (req, res) => {</p>
+                        <p>connection.query(</p>
+                        <p>'SELECT * FROM items WHERE id = ?',</p>
+                        <p>[req.params.id],</p>
+                        <p>(error, results) => {</p>
+                        <p>res.render('edit.ejs', {item: results[0]});</p>
+                        <p>});});</p>
+                </div>
+                </div>
+            </div> 
+            <div class="line-wrapper">
+                <div class="lines">
+                    <h5>create update button(1) - edit.ejs</h5>
+                    <div class="line-box">
+                        <p>＜form action="/update/＜％=item.id％＞" method="post"＞</p>
+                        <p>＜input name="itemName" value="＜％=item.name％＞"＞</p>
+                        <p>＜/form＞</p>
+                        <p>-</p>
+                        <p>-</p>
+                        <p>-</p>
+                        <p>-</p>
+                </div>
+                </div>
+            </div>  
+            <div class="line-wrapper">
+                <div class="lines">
+                    <h5>create update button(2) - app.ejs</h5>
+                    <div class="line-box">
+                        <p>app.post('/update/:id', (req, res) => {</p>
+                        <p>connection.query(</p>
+                        <p>'UPDATE items SET name = ? WHERE id = ?',</p>
+                        <p>[req.body.itemName, req.params.id],</p>
+                        <p>(error, results) => {</p>
+                        <p>res.redirect('/index');</p>
+                        <p>});});</p>
                 </div>
                 </div>
             </div>      
