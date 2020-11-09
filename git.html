@@ -3,19 +3,19 @@
   <head>
     <meta charset="utf-8">
     <title>CLiBaP</title>
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/clibap/style.css">
     <script src="/send_url.js"></script>
   </head>
 <body>
     <header>
      <div class="container">
-        <a class="header-logo" href="/">CL<span>i</span>BaP</a>
+        <a class="header-logo" href="/clibap/style.css">CL<span>i</span>BaP</a>
      </div>
     </header>
     <div class="language-wrapper">
         <div class="language">
           <div class="language-icon">
-            <img src="/images/Git.png">
+            <img src="/clibap/Git.png">
           </div>
           <h2>Git</h2>
           <p>
@@ -28,17 +28,17 @@
         </div>
     </div>
     <div class="contents-wrapper">
-        <%const items = [
-            {title: 'git init', description: 'prepare Git'},
-            {title: 'git add xxx', description: 'prepare sharing xxx'},
-            {title: 'git commit -m “xxx”', description: 'commit xxx'},
-            {title: 'git remote add origin URL', description: 'register remote'},
-            {title: 'git push origin master', description: 'upload to registered remote'},
-            {title: 'git pull origin master', description: 'download from remote'},
-            {title: 'git status', description: 'detect modification files'},
-            {title: 'git diff', description: 'display modifications'},
-            {title: 'git log', description: 'display commit history'},
-            {title: 'git log -p', description: 'display commit history (detailed)'}
+<!--         <%const items = [
+            {title: '', description: ''},
+            {title: '', description: ''},
+            {title: '', description: ''},
+            {title: '', description: ''},
+            {title: '', description: ''},
+            {title: '', description: ''},
+            {title: '', description: ''},
+            {title: '', description: ''},
+            {title: '', description: ''},
+            {title: '', description: ''}
         ];%>
 
 
@@ -50,13 +50,73 @@
                 </div>
             </div>
 
-            <%});%>
+            <%});%> -->
+      
+            <div class="card-wrapper">
+                <div class="card">
+                    <h5>prepare Git</h5>
+                    <p>git init</p>
+                </div>
+            </div>   
+            <div class="card-wrapper">
+                <div class="card">
+                    <h5>prepare sharing xxx</h5>
+                    <p>git add xxx</p>
+                </div>
+            </div> 
+            <div class="card-wrapper">
+                <div class="card">
+                    <h5>commit xxx</h5>
+                    <p>git commit -m “xxx”</p>
+                </div>
+            </div>  
+            <div class="card-wrapper">
+                <div class="card">
+                    <h5>register remote</h5>
+                    <p>git remote add origin URL</p>
+                </div>
+            </div>
+            <div class="card-wrapper">
+                <div class="card">
+                    <h5>upload to registered remote</h5>
+                    <p>git push origin master</p>
+                </div>
+            </div> 
+            <div class="card-wrapper">
+                <div class="card">
+                    <h5>download from remote</h5>
+                    <p>git pull origin master</p>
+                </div>
+            </div> 
+            <div class="card-wrapper">
+                <div class="card">
+                    <h5>detect modification files</h5>
+                    <p>git status</p>
+                </div>
+            </div>  
+            <div class="card-wrapper">
+                <div class="card">
+                    <h5>display modifications</h5>
+                    <p>git diff</p>
+                </div>
+            </div>   
+            <div class="card-wrapper">
+                <div class="card">
+                    <h5>display commit history</h5>
+                    <p>git log</p>
+                </div>
+            </div>  
+            <div class="card-wrapper">
+                <div class="card">
+                    <h5>display commit history (detailed)</h5>
+                    <p>git log -p</p>
+                </div>
+            </div>        
     </div>
 </body>
 <footer>
     <div class="bottom-wrapper">
-      <a class="index-button" href="/language">Back to select a language</a>
-      <h6>SEQUENCE : add -> commit -> push -> pull</h6>
+      <a class="index-button" href="/clibap/language">Back to select a language</a>
     </div>
 </footer>
 </html>
