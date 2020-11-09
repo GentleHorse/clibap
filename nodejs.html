@@ -28,11 +28,7 @@
     <div class="contents-wrapper">
 <!--         <%const items = [
 
-
-
-            {title: '', title1: '', title2: '<span><％=item.name％></span>', title3: '<％});％>', title4: '-', title5: '-', title6: '-', description: ''},
-            {title: 'connection.query(', title1: "'SELECT * FROM items',", title2: '(error, results) => {', title3: 'console.log(results);', title4: "res.render('index.ejs');", title5: '}', title6: ');', description: 'execute query - app.js'},
-            {title: 'connection.query(', title1: "'SELECT * FROM items',", title2: '(error, results) => {', title3: 'console.log(results);', title4: "res.render('index.ejs', {items: results});", title5: '}', title6: ');', description: 'display values - app.js'},
+            {title: '', title1: "", title2: '', title3: '', title4: "", title5: '', title6: '', description: ''},
             {title: '<form action="/create" method="post">', title1: '<input type="text">', title2: '<input type="submit" value="create">', title3: '</form>', title4: '-', title5: '-', title6: '-', description: 'request via form(1) - news.ejs'},
             {title: "app.post('/create', (res, req) => {", title1: '-', title2: '-', title3: '})', title4: '-', title5: '-', title6: '-', description: 'request via form(2) - app.js'},
             {title: '<form action="/create" method="post">', title1: '<input type="text" name="itemName">', title2: '<input type="submit" value="create">', title3: '</form>', title4: '-', title5: '-', title6: '-', description: 'receive values from server (1) - new.ejs'},
@@ -126,11 +122,11 @@
                 <div class="lines">
                     <h5>For each(1) - index.ejs</h5>
                     <div class="line-box">
-                        <p><％ const items = [</p>
+                        <p>＜％ const items = [</p>
                         <p>{id: 1, name: 'aaa'},</p>
                         <p>{id: 2, name: 'bbb'},</p>
                         <p>{id: 3, name: 'ccc'},</p>
-                        <p>];％></p>
+                        <p>];％＞</p>
                         <p>-</p>
                         <p>-</p>
                 </div>
@@ -140,13 +136,41 @@
                 <div class="lines">
                     <h5>For each(2) - index.ejs</h5>
                     <div class="line-box">
-                        <p><％items.forEach((item) => {％></p>
-                        <p><span><％=item.id％></span></p>
-                        <p><%=item.title2%></p>
-                        <p><%=item.title3%></p>
-                        <p><%=item.title4%></p>
-                        <p><%=item.title5%></p>
-                        <p><%=item.title6%></p>
+                        <p>＜％items.forEach((item) => {％＞</p>
+                        <p>＜span＞＜％=item.id％＞＜/span＞</p>
+                        <p>＜span＞＜％=item.name％＞＜/span＞</p>
+                        <p>＜％});％＞</p>
+                        <p>-</p>
+                        <p>-</p>
+                        <p>-</p>
+                </div>
+                </div>
+            </div> 
+            <div class="line-wrapper">
+                <div class="lines">
+                    <h5>execute query - app.js</h5>
+                    <div class="line-box">
+                        <p>connection.query(</p>
+                        <p>'SELECT * FROM items',</p>
+                        <p>(error, results) => {</p>
+                        <p>console.log(results);</p>
+                        <p>res.render('index.ejs');</p>
+                        <p>}</p>
+                        <p>);</p>
+                </div>
+                </div>
+            </div> 
+            <div class="line-wrapper">
+                <div class="lines">
+                    <h5>display values - app.js</h5>
+                    <div class="line-box">
+                        <p>connection.query(</p>
+                        <p>'SELECT * FROM items',</p>
+                        <p>(error, results) => {</p>
+                        <p>console.log(results);</p>
+                        <p>res.render('index.ejs', {items: results});</p>
+                        <p>}</p>
+                        <p>);</p>
                 </div>
                 </div>
             </div>      
