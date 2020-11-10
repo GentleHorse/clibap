@@ -30,10 +30,8 @@
     <div class="contents-wrapper">
 <!--         <%const items = [
 
-            {title: 'require "date"', title1: 'date1 = Date.new(2014, 7, 31)', title2: 'puts date1', title3: '-', title4: '-', title5: '----#2014-07-14----', title6: '-', description: 'date instance(1)'},
-            {title: 'require "date"', title1: 'date1 = Date.new(2014, 7, 31)', title2: 'puts date1.sunday?', title3: '-', title4: '-', title5: '----#false----', title6: '-', description: 'date instance(2)'},
-            {title: 'require "date"', title1: 'date1 = Date.today', title2: 'puts.date1', title3: '-', title4: '-', title5: '----#2017-04-28----', title6: '-', description: 'date instance(3)'},
-            {title: 'require "date"', title1: 'class Menu', title2: '-', title3: 'def Menu.is_discounted_today?', title4: 'today = Date.today', title5: 'return today.sunday?', title6: 'end', description: 'date instance(4)'}
+
+            {title: '', title1: '', title2: '', title3: '', title4: '', title5: '', title6: '', description: ''}
         ];%>
 
 
@@ -449,15 +447,57 @@
             </div>
             <div class="line-wrapper">
                 <div class="lines">
-                    <h5><%=item.description%></h5>
+                    <h5>date instance(1)</h5>
                     <div class="line-box">
-                        <p><%=item.title%></p>
-                        <p><%=item.title1%></p>
-                        <p><%=item.title2%></p>
-                        <p><%=item.title3%></p>
-                        <p><%=item.title4%></p>
-                        <p><%=item.title5%></p>
-                        <p><%=item.title6%></p>
+                        <p>require "date"</p>
+                        <p>date1 = Date.new(2014, 7, 31)</p>
+                        <p>puts date1</p>
+                        <p>-</p>
+                        <p>-</p>
+                        <p>----#2014-07-14----</p>
+                        <p>-</p>
+                </div>
+                </div>
+            </div> 
+            <div class="line-wrapper">
+                <div class="lines">
+                    <h5>date instance(2)</h5>
+                    <div class="line-box">
+                        <p>require "date"</p>
+                        <p>date1 = Date.new(2014, 7, 31)</p>
+                        <p>puts date1.sunday?</p>
+                        <p>-</p>
+                        <p>-</p>
+                        <p>----#false----</p>
+                        <p>-</p>
+                </div>
+                </div>
+            </div>  
+            <div class="line-wrapper">
+                <div class="lines">
+                    <h5>date instance(3)</h5>
+                    <div class="line-box">
+                        <p>require "date"</p>
+                        <p>date1 = Date.today</p>
+                        <p>puts.date1</p>
+                        <p>-</p>
+                        <p>-</p>
+                        <p>----#2017-04-28----</p>
+                        <p>-</p>
+                </div>
+                </div>
+            </div>  
+            <div class="line-wrapper">
+                <div class="lines">
+                    <h5>date instance(4)</h5>
+                    <div class="line-box">
+                        <p>require "date"</p>
+                        <p>class Menu</p>
+                        <p>-</p>
+                        <p>def Menu.is_discounted_today?</p>
+                        <p>today = Date.today</p>
+                        <p>return today.sunday?</p>
+                        <p>end</p>
                 </div>
                 </div>
             </div>      
