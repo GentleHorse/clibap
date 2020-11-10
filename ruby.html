@@ -30,11 +30,7 @@
     <div class="contents-wrapper">
 <!--         <%const items = [
 
-            {title: 'class Menu', title1: 'attr_accessor :name', title2: 'attr_accessor :price', title3: 'def info', title4: 'return "#{self.name},#{self.price}"', title5: 'end', title6: 'end', description: ''},
-            {title: '-', title1: 'def initialize', title2: 'puts "Menu is generated."', title3: 'end', title4: '-', title5: 'menu1 = Menu.new', title6: '----#"Menu is generated."----', description: 'initialize method in class (1)'},
-            {title: '-', title1: 'def initialize(message)', title2: 'puts message', title3: 'end', title4: '-', title5: 'menu1 = Menu.new("Hello!")', title6: '----#"Hello!"----', description: 'initialize method in class (2)'},
-            {title: '-', title1: 'def initialize(name:, price:)', title2: 'self.name = name', title3: 'self.price = price', title4: 'end', title5: '-', title6: 'menu1 = Menu.new(name: "Pizza", price: 800)', description: 'initialize method in class (3)'},
-            {title: '-', title1: 'require "./menu"', title2: '-', title3: '----※A name of another file is "menu.rb".----', title4: '-', title5: '-', title6: '-', description: 'load a separated file'},
+            {title: '', title1: '', title2: '', title3: '', title4: '', title5: '', title6: '', description: ''},
             {title: 'menu1 = Menu.new(name: "Pizza", price: 900)', title1: '-', title2: 'menus = [menu1, menu2, ...]', title3: '-', title4: 'menus.each do|menu|', title5: 'puts menu.info', title6: 'end', description: 'sequence of instance'},
             {title: 'fruits = ["apple", "banana", "orange"]', title1: 'index = 0', title2: 'fruits.do |fruit|', title3: 'puts "#{index}.#{fruit}"', title4: 'index += 1', title5: 'end', title6: '-', description: 'put index'},
             {title: 'puts "Type your name"', title1: 'name = gets.chomp', title2: 'puts "You are #{name}."', title3: '-', title4: '-', title5: '-', title6: '-', description: 'get input data of console (characters)'},
@@ -312,13 +308,69 @@
                 <div class="lines">
                     <h5>method and instance syntax</h5>
                     <div class="line-box">
-                        <p><%=item.title%></p>
-                        <p><%=item.title1%></p>
-                        <p><%=item.title2%></p>
-                        <p><%=item.title3%></p>
-                        <p><%=item.title4%></p>
-                        <p><%=item.title5%></p>
-                        <p><%=item.title6%></p>
+                        <p>class Menu</p>
+                        <p>attr_accessor :name</p>
+                        <p>attr_accessor :price</p>
+                        <p>def info</p>
+                        <p>return "#{self.name},#{self.price}"</p>
+                        <p>end</p>
+                        <p>end</p>
+                </div>
+                </div>
+            </div> 
+            <div class="line-wrapper">
+                <div class="lines">
+                    <h5>initialize method in class (1)</h5>
+                    <div class="line-box">
+                        <p>-</p>
+                        <p>def initialize</p>
+                        <p>puts "Menu is generated."</p>
+                        <p>end</p>
+                        <p>-</p>
+                        <p>menu1 = Menu.new</p>
+                        <p>----#"Menu is generated."----</p>
+                </div>
+                </div>
+            </div> 
+            <div class="line-wrapper">
+                <div class="lines">
+                    <h5>initialize method in class (2)</h5>
+                    <div class="line-box">
+                        <p>-</p>
+                        <p>def initialize(message)</p>
+                        <p>puts message</p>
+                        <p>end</p>
+                        <p>-</p>
+                        <p>menu1 = Menu.new("Hello!")</p>
+                        <p>----#"Hello!"----</p>
+                </div>
+                </div>
+            </div>  
+            <div class="line-wrapper">
+                <div class="lines">
+                    <h5>initialize method in class (3)</h5>
+                    <div class="line-box">
+                        <p>-</p>
+                        <p>def initialize(name:, price:)</p>
+                        <p>self.name = name</p>
+                        <p>self.price = price</p>
+                        <p>end</p>
+                        <p>-</p>
+                        <p>menu1 = Menu.new(name: "Pizza", price: 800)</p>
+                </div>
+                </div>
+            </div>
+            <div class="line-wrapper">
+                <div class="lines">
+                    <h5>load a separated file</h5>
+                    <div class="line-box">
+                        <p>-</p>
+                        <p>require "./menu"</p>
+                        <p>-</p>
+                        <p>----※A name of another file is "menu.rb".----</p>
+                        <p>-</p>
+                        <p>-</p>
+                        <p>-</p>
                 </div>
                 </div>
             </div>      
