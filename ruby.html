@@ -30,21 +30,10 @@
     <div class="contents-wrapper">
 <!--         <%const items = [
 
-            {title: '', title1: '', title2: '', title3: '', title4: '', title5: '', title6: '', description: ''},
-            {title: 'menu1 = Menu.new(name: "Pizza", price: 900)', title1: '-', title2: 'menus = [menu1, menu2, ...]', title3: '-', title4: 'menus.each do|menu|', title5: 'puts menu.info', title6: 'end', description: 'sequence of instance'},
-            {title: 'fruits = ["apple", "banana", "orange"]', title1: 'index = 0', title2: 'fruits.do |fruit|', title3: 'puts "#{index}.#{fruit}"', title4: 'index += 1', title5: 'end', title6: '-', description: 'put index'},
-            {title: 'puts "Type your name"', title1: 'name = gets.chomp', title2: 'puts "You are #{name}."', title3: '-', title4: '-', title5: '-', title6: '-', description: 'get input data of console (characters)'},
-            {title: 'puts "Type number"', title1: 'number = get.chomp.to_i', title2: 'puts "Double of #{number} is #{number * 2}."', title3: '-', title4: '-', title5: '-', title6: '-', description: 'get input data of console (number)'},
-            {title: 'require "./menu"', title1: 'class Food < Menu', title2: 'end', title3: '-', title4: '----※In child class, instance syntax and method can be used.----', title5: '-', title6: '-', description: 'create child class'},
-            {title: 'class Food < Menu', title1: 'attr_accessor :calorie', title2: 'def calorie_info', title3: '-', title4: 'end', title5: 'end', title6: '-', description: 'instance method in child class'},
             {title: 'require "date"', title1: 'date1 = Date.new(2014, 7, 31)', title2: 'puts date1', title3: '-', title4: '-', title5: '----#2014-07-14----', title6: '-', description: 'date instance(1)'},
             {title: 'require "date"', title1: 'date1 = Date.new(2014, 7, 31)', title2: 'puts date1.sunday?', title3: '-', title4: '-', title5: '----#false----', title6: '-', description: 'date instance(2)'},
             {title: 'require "date"', title1: 'date1 = Date.today', title2: 'puts.date1', title3: '-', title4: '-', title5: '----#2017-04-28----', title6: '-', description: 'date instance(3)'},
-            {title: 'require "date"', title1: 'class Menu', title2: '-', title3: 'def Menu.is_discounted_today?', title4: 'today = Date.today', title5: 'return today.sunday?', title6: 'end', description: 'date instance(4)'},
-            {title: '-', title1: '-', title2: '-', title3: '-', title4: '-', title5: '-', title6: '-', description: '-'},
-            {title: '-', title1: '-', title2: '-', title3: '-', title4: '-', title5: '-', title6: '-', description: '-'},
-            {title: '-', title1: '-', title2: '-', title3: '-', title4: '-', title5: '-', title6: '-', description: '-'},
-            {title: '-', title1: '-', title2: '-', title3: '-', title4: '-', title5: '-', title6: '-', description: '-'}
+            {title: 'require "date"', title1: 'class Menu', title2: '-', title3: 'def Menu.is_discounted_today?', title4: 'today = Date.today', title5: 'return today.sunday?', title6: 'end', description: 'date instance(4)'}
         ];%>
 
 
@@ -371,6 +360,104 @@
                         <p>-</p>
                         <p>-</p>
                         <p>-</p>
+                </div>
+                </div>
+            </div> 
+            <div class="line-wrapper">
+                <div class="lines">
+                    <h5>sequence of instance</h5>
+                    <div class="line-box">
+                        <p>menu1 = Menu.new(name: "Pizza", price: 900)</p>
+                        <p>-</p>
+                        <p>menus = [menu1, menu2, ...]</p>
+                        <p>-</p>
+                        <p>menus.each do|menu|</p>
+                        <p>puts menu.info</p>
+                        <p>end</p>
+                </div>
+                </div>
+            </div>  
+            <div class="line-wrapper">
+                <div class="lines">
+                    <h5>put index</h5>
+                    <div class="line-box">
+                        <p>fruits = ["apple", "banana", "orange"]</p>
+                        <p>index = 0</p>
+                        <p>fruits.do |fruit|</p>
+                        <p>puts "#{index}.#{fruit}"</p>
+                        <p>index += 1</p>
+                        <p>end</p>
+                        <p>-</p>
+                </div>
+                </div>
+            </div> 
+            <div class="line-wrapper">
+                <div class="lines">
+                    <h5>get input data of console (characters)</h5>
+                    <div class="line-box">
+                        <p>puts "Type your name"</p>
+                        <p>name = gets.chomp</p>
+                        <p>puts "You are #{name}."</p>
+                        <p>-</p>
+                        <p>-</p>
+                        <p>-</p>
+                        <p>-</p>
+                </div>
+                </div>
+            </div>   
+            <div class="line-wrapper">
+                <div class="lines">
+                    <h5>get input data of console (number)</h5>
+                    <div class="line-box">
+                        <p>puts "Type number"</p>
+                        <p>number = get.chomp.to_i</p>
+                        <p>puts "Double of #{number} is #{number * 2}."</p>
+                        <p>-</p>
+                        <p>-</p>
+                        <p>-</p>
+                        <p>-</p>
+                </div>
+                </div>
+            </div>  
+            <div class="line-wrapper">
+                <div class="lines">
+                    <h5>create child class</h5>
+                    <div class="line-box">
+                        <p>require "./menu"</p>
+                        <p>class Food < Menu</p>
+                        <p>end</p>
+                        <p>-</p>
+                        <p>----※In child class, instance syntax and method can be used.----</p>
+                        <p>-</p>
+                        <p>-</p>
+                </div>
+                </div>
+            </div> 
+            <div class="line-wrapper">
+                <div class="lines">
+                    <h5>instance method in child class</h5>
+                    <div class="line-box">
+                        <p>class Food < Menu</p>
+                        <p>attr_accessor :calorie</p>
+                        <p>def calorie_info</p>
+                        <p>-</p>
+                        <p>end</p>
+                        <p>end</p>
+                        <p>-</p>
+                </div>
+                </div>
+            </div>
+            <div class="line-wrapper">
+                <div class="lines">
+                    <h5><%=item.description%></h5>
+                    <div class="line-box">
+                        <p><%=item.title%></p>
+                        <p><%=item.title1%></p>
+                        <p><%=item.title2%></p>
+                        <p><%=item.title3%></p>
+                        <p><%=item.title4%></p>
+                        <p><%=item.title5%></p>
+                        <p><%=item.title6%></p>
                 </div>
                 </div>
             </div>      
